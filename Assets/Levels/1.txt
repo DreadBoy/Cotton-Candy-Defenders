@@ -1,0 +1,10 @@
+---------------MAP---------------
+landscape_29 landscape_33 landscape_28
+landscape_29 landscape_00 landscape_37
+landscape_06 landscape_32 landscape_03
+landscape_07 landscape_28 landscape_09
+---------------PATHS---------------
+0 0
+0 1
+0 2
+0 3
