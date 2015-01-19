@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: c1424821e6c42734aa264cbbf6b0d780
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: CestaRavna
+    100002: CestaRavna 1
+    100004: CestaRavna 10
+    100006: CestaRavna 11
+    100008: CestaRavna 12
+    100010: CestaRavna 13
+    100012: CestaRavna 14
+    100014: CestaRavna 15
+    100016: CestaRavna 16
+    100018: CestaRavna 17
+    100020: CestaRavna 18
+    100022: CestaRavna 19
+    100024: CestaRavna 2
+    100026: CestaRavna 20
+    100028: CestaRavna 21
+    100030: CestaRavna 22
+    100032: CestaRavna 23
+    100034: CestaRavna 3
+    100036: CestaRavna 4
+    100038: CestaRavna 5
+    100040: CestaRavna 6
+    100042: CestaRavna 7
+    100044: CestaRavna 8
+    100046: CestaRavna 9
+    100048: CestaZavoj
+    100050: CestaZavoj 1
+    100052: CestaZavoj 2
+    100054: CestaZavoj 3
+    100056: CestaZavoj 4
+    100058: CestaZavoj 5
+    100060: ID12
+    100062: ID12 1
+    100064: ID12 10
+    100066: ID12 11
+    100068: ID12 12
+    100070: ID12 13
+    100072: ID12 14
+    100074: ID12 15
+    100076: ID12 16
+    100078: ID12 17
+    100080: ID12 18
+    100082: ID12 19
+    100084: ID12 2
+    100086: ID12 20
+    100088: ID12 21
+    100090: ID12 22
+    100092: ID12 23
+    100094: ID12 3
+    100096: ID12 4
+    100098: ID12 5
+    100100: ID12 6
+    100102: ID12 7
+    100104: ID12 8
+    100106: ID12 9
+    100108: ID20
+    100110: ID20 1
+    100112: ID20 10
+    100114: ID20 11
+    100116: ID20 12
+    100118: ID20 13
+    100120: ID20 14
+    100122: ID20 15
+    100124: ID20 16
+    100126: ID20 17
+    100128: ID20 18
+    100130: ID20 19
+    100132: ID20 2
+    100134: ID20 20
+    100136: ID20 21
+    100138: ID20 22
+    100140: ID20 23
+    100142: ID20 3
+    100144: ID20 4
+    100146: ID20 5
+    100148: ID20 6
+    100150: ID20 7
+    100152: ID20 8
+    100154: ID20 9
+    100156: ID36
+    100158: ID36 1
+    100160: ID36 2
+    100162: ID36 3
+    100164: ID36 4
+    100166: ID36 5
+    100168: ID42
+    100170: ID42 1
+    100172: ID42 2
+    100174: ID42 3
+    100176: ID42 4
+    100178: ID42 5
+    100180: instance_0
+    100182: instance_1
+    100184: instance_10
+    100186: instance_11
+    100188: instance_12
+    100190: instance_13
+    100192: instance_14
+    100194: instance_15
+    100196: instance_16
+    100198: instance_17
+    100200: instance_18
+    100202: instance_19
+    100204: instance_2
+    100206: instance_20
+    100208: instance_21
+    100210: instance_22
+    100212: instance_23
+    100214: instance_24
+    100216: instance_25
+    100218: instance_26
+    100220: instance_27
+    100222: instance_28
+    100224: instance_29
+    100226: instance_3
+    100228: instance_4
+    100230: instance_5
+    100232: instance_6
+    100234: instance_7
+    100236: instance_8
+    100238: instance_9
+    100240: //RootNode
+    100242: ID82
+    100244: ID82 1
+    100246: ID82 10
+    100248: ID82 11
+    100250: ID82 12
+    100252: ID82 13
+    100254: ID82 14
+    100256: ID82 15
+    100258: ID82 16
+    100260: ID82 17
+    100262: ID82 18
+    100264: ID82 19
+    100266: ID82 2
+    100268: ID82 20
+    100270: ID82 21
+    100272: ID82 22
+    100274: ID82 23
+    100276: ID82 24
+    100278: ID82 25
+    100280: ID82 26
+    100282: ID82 27
+    100284: ID82 28
+    100286: ID82 29
+    100288: ID82 3
+    100290: ID82 30
+    100292: ID82 31
+    100294: ID82 32
+    100296: ID82 33
+    100298: ID82 34
+    100300: ID82 35
+    100302: ID82 36
+    100304: ID82 37
+    100306: ID82 38
+    100308: ID82 39
+    100310: ID82 4
+    100312: ID82 40
+    100314: ID82 41
+    100316: ID82 5
+    100318: ID82 6
+    100320: ID82 7
+    100322: ID82 8
+    100324: ID82 9
+    100326: ID88
+    100328: ID88 1
+    100330: ID88 10
+    100332: ID88 11
+    100334: ID88 12
+    100336: ID88 13
+    100338: ID88 14
+    100340: ID88 15
+    100342: ID88 16
+    100344: ID88 17
+    100346: ID88 18
+    100348: ID88 19
+    100350: ID88 2
+    100352: ID88 20
+    100354: ID88 21
+    100356: ID88 22
+    100358: ID88 23
+    100360: ID88 24
+    100362: ID88 25
+    100364: ID88 26
+    100366: ID88 27
+    100368: ID88 28
+    100370: ID88 29
+    100372: ID88 3
+    100374: ID88 30
+    100376: ID88 31
+    100378: ID88 32
+    100380: ID88 33
+    100382: ID88 34
+    100384: ID88 35
+    100386: ID88 36
+    100388: ID88 37
+    100390: ID88 38
+    100392: ID88 39
+    100394: ID88 4
+    100396: ID88 40
+    100398: ID88 41
+    100400: ID88 5
+    100402: ID88 6
+    100404: ID88 7
+    100406: ID88 8
+    100408: ID88 9
+    100410: instance_30
+    100412: instance_31
+    100414: instance_32
+    100416: instance_33
+    100418: instance_34
+    100420: instance_35
+    100422: instance_36
+    100424: instance_37
+    100426: instance_38
+    100428: instance_39
+    100430: instance_40
+    100432: instance_41
+    100434: instance_42
+    100436: instance_43
+    100438: instance_44
+    100440: instance_45
+    100442: instance_46
+    100444: instance_47
+    100446: instance_48
+    100448: instance_49
+    100450: instance_50
+    100452: instance_51
+    100454: instance_52
+    100456: instance_53
+    100458: instance_54
+    100460: instance_55
+    100462: instance_56
+    100464: instance_57
+    100466: instance_58
+    100468: instance_59
+    100470: instance_60
+    100472: instance_61
+    100474: instance_62
+    100476: instance_63
+    100478: instance_64
+    100480: instance_65
+    100482: instance_66
+    100484: instance_67
+    100486: instance_68
+    100488: instance_69
+    100490: instance_70
+    100492: instance_71
+    100494: Trava
+    100496: Trava 1
+    100498: Trava 10
+    100500: Trava 11
+    100502: Trava 12
+    100504: Trava 13
+    100506: Trava 14
+    100508: Trava 15
+    100510: Trava 16
+    100512: Trava 17
+    100514: Trava 18
+    100516: Trava 19
+    100518: Trava 2
+    100520: Trava 20
+    100522: Trava 21
+    100524: Trava 22
+    100526: Trava 23
+    100528: Trava 24
+    100530: Trava 25
+    100532: Trava 26
+    100534: Trava 27
+    100536: Trava 28
+    100538: Trava 29
+    100540: Trava 3
+    100542: Trava 30
+    100544: Trava 31
+    100546: Trava 32
+    100548: Trava 33
+    100550: Trava 34
+    100552: Trava 35
+    100554: Trava 36
+    100556: Trava 37
+    100558: Trava 38
+    100560: Trava 39
+    100562: Trava 4
+    100564: Trava 40
+    100566: Trava 41
+    100568: Trava 5
+    100570: Trava 6
+    100572: Trava 7
+    100574: Trava 8
+    100576: Trava 9
+    400000: CestaRavna
+    400002: CestaRavna 1
+    400004: CestaRavna 10
+    400006: CestaRavna 11
+    400008: CestaRavna 12
+    400010: CestaRavna 13
+    400012: CestaRavna 14
+    400014: CestaRavna 15
+    400016: CestaRavna 16
+    400018: CestaRavna 17
+    400020: CestaRavna 18
+    400022: CestaRavna 19
+    400024: CestaRavna 2
+    400026: CestaRavna 20
+    400028: CestaRavna 21
+    400030: CestaRavna 22
+    400032: CestaRavna 23
+    400034: CestaRavna 3
+    400036: CestaRavna 4
+    400038: CestaRavna 5
+    400040: CestaRavna 6
+    400042: CestaRavna 7
+    400044: CestaRavna 8
+    400046: CestaRavna 9
+    400048: CestaZavoj
+    400050: CestaZavoj 1
+    400052: CestaZavoj 2
+    400054: CestaZavoj 3
+    400056: CestaZavoj 4
+    400058: CestaZavoj 5
+    400060: ID12
+    400062: ID12 1
+    400064: ID12 10
+    400066: ID12 11
+    400068: ID12 12
+    400070: ID12 13
+    400072: ID12 14
+    400074: ID12 15
+    400076: ID12 16
+    400078: ID12 17
+    400080: ID12 18
+    400082: ID12 19
+    400084: ID12 2
+    400086: ID12 20
+    400088: ID12 21
+    400090: ID12 22
+    400092: ID12 23
+    400094: ID12 3
+    400096: ID12 4
+    400098: ID12 5
+    400100: ID12 6
+    400102: ID12 7
+    400104: ID12 8
+    400106: ID12 9
+    400108: ID20
+    400110: ID20 1
+    400112: ID20 10
+    400114: ID20 11
+    400116: ID20 12
+    400118: ID20 13
+    400120: ID20 14
+    400122: ID20 15
+    400124: ID20 16
+    400126: ID20 17
+    400128: ID20 18
+    400130: ID20 19
+    400132: ID20 2
+    400134: ID20 20
+    400136: ID20 21
+    400138: ID20 22
+    400140: ID20 23
+    400142: ID20 3
+    400144: ID20 4
+    400146: ID20 5
+    400148: ID20 6
+    400150: ID20 7
+    400152: ID20 8
+    400154: ID20 9
+    400156: ID36
+    400158: ID36 1
+    400160: ID36 2
+    400162: ID36 3
+    400164: ID36 4
+    400166: ID36 5
+    400168: ID42
+    400170: ID42 1
+    400172: ID42 2
+    400174: ID42 3
+    400176: ID42 4
+    400178: ID42 5
+    400180: instance_0
+    400182: instance_1
+    400184: instance_10
+    400186: instance_11
+    400188: instance_12
+    400190: instance_13
+    400192: instance_14
+    400194: instance_15
+    400196: instance_16
+    400198: instance_17
+    400200: instance_18
+    400202: instance_19
+    400204: instance_2
+    400206: instance_20
+    400208: instance_21
+    400210: instance_22
+    400212: instance_23
+    400214: instance_24
+    400216: instance_25
+    400218: instance_26
+    400220: instance_27
+    400222: instance_28
+    400224: instance_29
+    400226: instance_3
+    400228: instance_4
+    400230: instance_5
+    400232: instance_6
+    400234: instance_7
+    400236: instance_8
+    400238: instance_9
+    400240: //RootNode
+    400242: ID82
+    400244: ID82 1
+    400246: ID82 10
+    400248: ID82 11
+    400250: ID82 12
+    400252: ID82 13
+    400254: ID82 14
+    400256: ID82 15
+    400258: ID82 16
+    400260: ID82 17
+    400262: ID82 18
+    400264: ID82 19
+    400266: ID82 2
+    400268: ID82 20
+    400270: ID82 21
+    400272: ID82 22
+    400274: ID82 23
+    400276: ID82 24
+    400278: ID82 25
+    400280: ID82 26
+    400282: ID82 27
+    400284: ID82 28
+    400286: ID82 29
+    400288: ID82 3
+    400290: ID82 30
+    400292: ID82 31
+    400294: ID82 32
+    400296: ID82 33
+    400298: ID82 34
+    400300: ID82 35
+    400302: ID82 36
+    400304: ID82 37
+    400306: ID82 38
+    400308: ID82 39
+    400310: ID82 4
+    400312: ID82 40
+    400314: ID82 41
+    400316: ID82 5
+    400318: ID82 6
+    400320: ID82 7
+    400322: ID82 8
+    400324: ID82 9
+    400326: ID88
+    400328: ID88 1
+    400330: ID88 10
+    400332: ID88 11
+    400334: ID88 12
+    400336: ID88 13
+    400338: ID88 14
+    400340: ID88 15
+    400342: ID88 16
+    400344: ID88 17
+    400346: ID88 18
+    400348: ID88 19
+    400350: ID88 2
+    400352: ID88 20
+    400354: ID88 21
+    400356: ID88 22
+    400358: ID88 23
+    400360: ID88 24
+    400362: ID88 25
+    400364: ID88 26
+    400366: ID88 27
+    400368: ID88 28
+    400370: ID88 29
+    400372: ID88 3
+    400374: ID88 30
+    400376: ID88 31
+    400378: ID88 32
+    400380: ID88 33
+    400382: ID88 34
+    400384: ID88 35
+    400386: ID88 36
+    400388: ID88 37
+    400390: ID88 38
+    400392: ID88 39
+    400394: ID88 4
+    400396: ID88 40
+    400398: ID88 41
+    400400: ID88 5
+    400402: ID88 6
+    400404: ID88 7
+    400406: ID88 8
+    400408: ID88 9
+    400410: instance_30
+    400412: instance_31
+    400414: instance_32
+    400416: instance_33
+    400418: instance_34
+    400420: instance_35
+    400422: instance_36
+    400424: instance_37
+    400426: instance_38
+    400428: instance_39
+    400430: instance_40
+    400432: instance_41
+    400434: instance_42
+    400436: instance_43
+    400438: instance_44
+    400440: instance_45
+    400442: instance_46
+    400444: instance_47
+    400446: instance_48
+    400448: instance_49
+    400450: instance_50
+    400452: instance_51
+    400454: instance_52
+    400456: instance_53
+    400458: instance_54
+    400460: instance_55
+    400462: instance_56
+    400464: instance_57
+    400466: instance_58
+    400468: instance_59
+    400470: instance_60
+    400472: instance_61
+    400474: instance_62
+    400476: instance_63
+    400478: instance_64
+    400480: instance_65
+    400482: instance_66
+    400484: instance_67
+    400486: instance_68
+    400488: instance_69
+    400490: instance_70
+    400492: instance_71
+    400494: Trava
+    400496: Trava 1
+    400498: Trava 10
+    400500: Trava 11
+    400502: Trava 12
+    400504: Trava 13
+    400506: Trava 14
+    400508: Trava 15
+    400510: Trava 16
+    400512: Trava 17
+    400514: Trava 18
+    400516: Trava 19
+    400518: Trava 2
+    400520: Trava 20
+    400522: Trava 21
+    400524: Trava 22
+    400526: Trava 23
+    400528: Trava 24
+    400530: Trava 25
+    400532: Trava 26
+    400534: Trava 27
+    400536: Trava 28
+    400538: Trava 29
+    400540: Trava 3
+    400542: Trava 30
+    400544: Trava 31
+    400546: Trava 32
+    400548: Trava 33
+    400550: Trava 34
+    400552: Trava 35
+    400554: Trava 36
+    400556: Trava 37
+    400558: Trava 38
+    400560: Trava 39
+    400562: Trava 4
+    400564: Trava 40
+    400566: Trava 41
+    400568: Trava 5
+    400570: Trava 6
+    400572: Trava 7
+    400574: Trava 8
+    400576: Trava 9
+    2300000: CestaRavna
+    2300002: CestaRavna 1
+    2300004: CestaRavna 10
+    2300006: CestaRavna 11
+    2300008: CestaRavna 12
+    2300010: CestaRavna 13
+    2300012: CestaRavna 14
+    2300014: CestaRavna 15
+    2300016: CestaRavna 16
+    2300018: CestaRavna 17
+    2300020: CestaRavna 18
+    2300022: CestaRavna 19
+    2300024: CestaRavna 2
+    2300026: CestaRavna 20
+    2300028: CestaRavna 21
+    2300030: CestaRavna 22
+    2300032: CestaRavna 23
+    2300034: CestaRavna 3
+    2300036: CestaRavna 4
+    2300038: CestaRavna 5
+    2300040: CestaRavna 6
+    2300042: CestaRavna 7
+    2300044: CestaRavna 8
+    2300046: CestaRavna 9
+    2300048: CestaZavoj
+    2300050: CestaZavoj 1
+    2300052: CestaZavoj 2
+    2300054: CestaZavoj 3
+    2300056: CestaZavoj 4
+    2300058: CestaZavoj 5
+    2300060: ID12
+    2300062: ID12 1
+    2300064: ID12 10
+    2300066: ID12 11
+    2300068: ID12 12
+    2300070: ID12 13
+    2300072: ID12 14
+    2300074: ID12 15
+    2300076: ID12 16
+    2300078: ID12 17
+    2300080: ID12 18
+    2300082: ID12 19
+    2300084: ID12 2
+    2300086: ID12 20
+    2300088: ID12 21
+    2300090: ID12 22
+    2300092: ID12 23
+    2300094: ID12 3
+    2300096: ID12 4
+    2300098: ID12 5
+    2300100: ID12 6
+    2300102: ID12 7
+    2300104: ID12 8
+    2300106: ID12 9
+    2300108: ID20
+    2300110: ID20 1
+    2300112: ID20 10
+    2300114: ID20 11
+    2300116: ID20 12
+    2300118: ID20 13
+    2300120: ID20 14
+    2300122: ID20 15
+    2300124: ID20 16
+    2300126: ID20 17
+    2300128: ID20 18
+    2300130: ID20 19
+    2300132: ID20 2
+    2300134: ID20 20
+    2300136: ID20 21
+    2300138: ID20 22
+    2300140: ID20 23
+    2300142: ID20 3
+    2300144: ID20 4
+    2300146: ID20 5
+    2300148: ID20 6
+    2300150: ID20 7
+    2300152: ID20 8
+    2300154: ID20 9
+    2300156: ID36
+    2300158: ID36 1
+    2300160: ID36 2
+    2300162: ID36 3
+    2300164: ID36 4
+    2300166: ID36 5
+    2300168: ID42
+    2300170: ID42 1
+    2300172: ID42 2
+    2300174: ID42 3
+    2300176: ID42 4
+    2300178: ID42 5
+    2300180: ID82
+    2300182: ID82 1
+    2300184: ID82 10
+    2300186: ID82 11
+    2300188: ID82 12
+    2300190: ID82 13
+    2300192: ID82 14
+    2300194: ID82 15
+    2300196: ID82 16
+    2300198: ID82 17
+    2300200: ID82 18
+    2300202: ID82 19
+    2300204: ID82 2
+    2300206: ID82 20
+    2300208: ID82 21
+    2300210: ID82 22
+    2300212: ID82 23
+    2300214: ID82 24
+    2300216: ID82 25
+    2300218: ID82 26
+    2300220: ID82 27
+    2300222: ID82 28
+    2300224: ID82 29
+    2300226: ID82 3
+    2300228: ID82 30
+    2300230: ID82 31
+    2300232: ID82 32
+    2300234: ID82 33
+    2300236: ID82 34
+    2300238: ID82 35
+    2300240: ID82 36
+    2300242: ID82 37
+    2300244: ID82 38
+    2300246: ID82 39
+    2300248: ID82 4
+    2300250: ID82 40
+    2300252: ID82 41
+    2300254: ID82 5
+    2300256: ID82 6
+    2300258: ID82 7
+    2300260: ID82 8
+    2300262: ID82 9
+    2300264: ID88
+    2300266: ID88 1
+    2300268: ID88 10
+    2300270: ID88 11
+    2300272: ID88 12
+    2300274: ID88 13
+    2300276: ID88 14
+    2300278: ID88 15
+    2300280: ID88 16
+    2300282: ID88 17
+    2300284: ID88 18
+    2300286: ID88 19
+    2300288: ID88 2
+    2300290: ID88 20
+    2300292: ID88 21
+    2300294: ID88 22
+    2300296: ID88 23
+    2300298: ID88 24
+    2300300: ID88 25
+    2300302: ID88 26
+    2300304: ID88 27
+    2300306: ID88 28
+    2300308: ID88 29
+    2300310: ID88 3
+    2300312: ID88 30
+    2300314: ID88 31
+    2300316: ID88 32
+    2300318: ID88 33
+    2300320: ID88 34
+    2300322: ID88 35
+    2300324: ID88 36
+    2300326: ID88 37
+    2300328: ID88 38
+    2300330: ID88 39
+    2300332: ID88 4
+    2300334: ID88 40
+    2300336: ID88 41
+    2300338: ID88 5
+    2300340: ID88 6
+    2300342: ID88 7
+    2300344: ID88 8
+    2300346: ID88 9
+    2300348: Trava
+    2300350: Trava 1
+    2300352: Trava 10
+    2300354: Trava 11
+    2300356: Trava 12
+    2300358: Trava 13
+    2300360: Trava 14
+    2300362: Trava 15
+    2300364: Trava 16
+    2300366: Trava 17
+    2300368: Trava 18
+    2300370: Trava 19
+    2300372: Trava 2
+    2300374: Trava 20
+    2300376: Trava 21
+    2300378: Trava 22
+    2300380: Trava 23
+    2300382: Trava 24
+    2300384: Trava 25
+    2300386: Trava 26
+    2300388: Trava 27
+    2300390: Trava 28
+    2300392: Trava 29
+    2300394: Trava 3
+    2300396: Trava 30
+    2300398: Trava 31
+    2300400: Trava 32
+    2300402: Trava 33
+    2300404: Trava 34
+    2300406: Trava 35
+    2300408: Trava 36
+    2300410: Trava 37
+    2300412: Trava 38
+    2300414: Trava 39
+    2300416: Trava 4
+    2300418: Trava 40
+    2300420: Trava 41
+    2300422: Trava 5
+    2300424: Trava 6
+    2300426: Trava 7
+    2300428: Trava 8
+    2300430: Trava 9
+    3300000: CestaRavna
+    3300002: CestaRavna 1
+    3300004: CestaRavna 10
+    3300006: CestaRavna 11
+    3300008: CestaRavna 12
+    3300010: CestaRavna 13
+    3300012: CestaRavna 14
+    3300014: CestaRavna 15
+    3300016: CestaRavna 16
+    3300018: CestaRavna 17
+    3300020: CestaRavna 18
+    3300022: CestaRavna 19
+    3300024: CestaRavna 2
+    3300026: CestaRavna 20
+    3300028: CestaRavna 21
+    3300030: CestaRavna 22
+    3300032: CestaRavna 23
+    3300034: CestaRavna 3
+    3300036: CestaRavna 4
+    3300038: CestaRavna 5
+    3300040: CestaRavna 6
+    3300042: CestaRavna 7
+    3300044: CestaRavna 8
+    3300046: CestaRavna 9
+    3300048: CestaZavoj
+    3300050: CestaZavoj 1
+    3300052: CestaZavoj 2
+    3300054: CestaZavoj 3
+    3300056: CestaZavoj 4
+    3300058: CestaZavoj 5
+    3300060: ID12
+    3300062: ID12 1
+    3300064: ID12 10
+    3300066: ID12 11
+    3300068: ID12 12
+    3300070: ID12 13
+    3300072: ID12 14
+    3300074: ID12 15
+    3300076: ID12 16
+    3300078: ID12 17
+    3300080: ID12 18
+    3300082: ID12 19
+    3300084: ID12 2
+    3300086: ID12 20
+    3300088: ID12 21
+    3300090: ID12 22
+    3300092: ID12 23
+    3300094: ID12 3
+    3300096: ID12 4
+    3300098: ID12 5
+    3300100: ID12 6
+    3300102: ID12 7
+    3300104: ID12 8
+    3300106: ID12 9
+    3300108: ID20
+    3300110: ID20 1
+    3300112: ID20 10
+    3300114: ID20 11
+    3300116: ID20 12
+    3300118: ID20 13
+    3300120: ID20 14
+    3300122: ID20 15
+    3300124: ID20 16
+    3300126: ID20 17
+    3300128: ID20 18
+    3300130: ID20 19
+    3300132: ID20 2
+    3300134: ID20 20
+    3300136: ID20 21
+    3300138: ID20 22
+    3300140: ID20 23
+    3300142: ID20 3
+    3300144: ID20 4
+    3300146: ID20 5
+    3300148: ID20 6
+    3300150: ID20 7
+    3300152: ID20 8
+    3300154: ID20 9
+    3300156: ID36
+    3300158: ID36 1
+    3300160: ID36 2
+    3300162: ID36 3
+    3300164: ID36 4
+    3300166: ID36 5
+    3300168: ID42
+    3300170: ID42 1
+    3300172: ID42 2
+    3300174: ID42 3
+    3300176: ID42 4
+    3300178: ID42 5
+    3300180: ID82
+    3300182: ID82 1
+    3300184: ID82 10
+    3300186: ID82 11
+    3300188: ID82 12
+    3300190: ID82 13
+    3300192: ID82 14
+    3300194: ID82 15
+    3300196: ID82 16
+    3300198: ID82 17
+    3300200: ID82 18
+    3300202: ID82 19
+    3300204: ID82 2
+    3300206: ID82 20
+    3300208: ID82 21
+    3300210: ID82 22
+    3300212: ID82 23
+    3300214: ID82 24
+    3300216: ID82 25
+    3300218: ID82 26
+    3300220: ID82 27
+    3300222: ID82 28
+    3300224: ID82 29
+    3300226: ID82 3
+    3300228: ID82 30
+    3300230: ID82 31
+    3300232: ID82 32
+    3300234: ID82 33
+    3300236: ID82 34
+    3300238: ID82 35
+    3300240: ID82 36
+    3300242: ID82 37
+    3300244: ID82 38
+    3300246: ID82 39
+    3300248: ID82 4
+    3300250: ID82 40
+    3300252: ID82 41
+    3300254: ID82 5
+    3300256: ID82 6
+    3300258: ID82 7
+    3300260: ID82 8
+    3300262: ID82 9
+    3300264: ID88
+    3300266: ID88 1
+    3300268: ID88 10
+    3300270: ID88 11
+    3300272: ID88 12
+    3300274: ID88 13
+    3300276: ID88 14
+    3300278: ID88 15
+    3300280: ID88 16
+    3300282: ID88 17
+    3300284: ID88 18
+    3300286: ID88 19
+    3300288: ID88 2
+    3300290: ID88 20
+    3300292: ID88 21
+    3300294: ID88 22
+    3300296: ID88 23
+    3300298: ID88 24
+    3300300: ID88 25
+    3300302: ID88 26
+    3300304: ID88 27
+    3300306: ID88 28
+    3300308: ID88 29
+    3300310: ID88 3
+    3300312: ID88 30
+    3300314: ID88 31
+    3300316: ID88 32
+    3300318: ID88 33
+    3300320: ID88 34
+    3300322: ID88 35
+    3300324: ID88 36
+    3300326: ID88 37
+    3300328: ID88 38
+    3300330: ID88 39
+    3300332: ID88 4
+    3300334: ID88 40
+    3300336: ID88 41
+    3300338: ID88 5
+    3300340: ID88 6
+    3300342: ID88 7
+    3300344: ID88 8
+    3300346: ID88 9
+    3300348: Trava
+    3300350: Trava 1
+    3300352: Trava 10
+    3300354: Trava 11
+    3300356: Trava 12
+    3300358: Trava 13
+    3300360: Trava 14
+    3300362: Trava 15
+    3300364: Trava 16
+    3300366: Trava 17
+    3300368: Trava 18
+    3300370: Trava 19
+    3300372: Trava 2
+    3300374: Trava 20
+    3300376: Trava 21
+    3300378: Trava 22
+    3300380: Trava 23
+    3300382: Trava 24
+    3300384: Trava 25
+    3300386: Trava 26
+    3300388: Trava 27
+    3300390: Trava 28
+    3300392: Trava 29
+    3300394: Trava 3
+    3300396: Trava 30
+    3300398: Trava 31
+    3300400: Trava 32
+    3300402: Trava 33
+    3300404: Trava 34
+    3300406: Trava 35
+    3300408: Trava 36
+    3300410: Trava 37
+    3300412: Trava 38
+    3300414: Trava 39
+    3300416: Trava 4
+    3300418: Trava 40
+    3300420: Trava 41
+    3300422: Trava 5
+    3300424: Trava 6
+    3300426: Trava 7
+    3300428: Trava 8
+    3300430: Trava 9
+    4300000: CestaRavna
+    4300002: ID12
+    4300004: ID20
+    4300006: CestaZavoj
+    4300008: ID36
+    4300010: ID42
+    4300012: Trava
+    4300014: ID82
+    4300016: ID88
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
