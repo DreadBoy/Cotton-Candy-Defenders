@@ -4,8 +4,8 @@
         <contributor>
             <authoring_tool>SketchUp 15.2.685</authoring_tool>
         </contributor>
-        <created>2015-01-20T14:54:48Z</created>
-        <modified>2015-01-20T14:54:48Z</modified>
+        <created>2015-01-20T20:04:03Z</created>
+        <modified>2015-01-20T20:04:03Z</modified>
         <unit meter="0.0254" name="inch" />
         <up_axis>Z_UP</up_axis>
     </asset>
@@ -13,7 +13,7 @@
         <visual_scene id="ID1">
             <node name="SketchUp">
                 <node id="ID2" name="instance_0">
-                    <matrix>1 0 0 -15.26728 0 1 0 -15.2673 0 0 1 -70.47244 0 0 0 1</matrix>
+                    <matrix>1 0 0 -15.33206 0 1 0 -15.33209 0 0 1 -1.776357e-015 0 0 0 1</matrix>
                     <instance_node url="#ID3" />
                 </node>
             </node>

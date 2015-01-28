@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour {
     private IEnumerator Move()
     {
         float timeSinceStarted = 0f;
-        while (true)
+        while (true && goal != null)
         {
             timeSinceStarted += Time.deltaTime;
             transform.position = Vector3.Lerp(transform.position, goal.transform.position, timeSinceStarted / 2);

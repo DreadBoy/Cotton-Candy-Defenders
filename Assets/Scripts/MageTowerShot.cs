@@ -22,7 +22,11 @@ public class MageTowerShot : MonoBehaviour
             {
                 if (hitCollider.tag == "Enemy")
                 {
-                    GameObject project = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
+                    
+                    TowerStats towerStats = GetComponent<TowerStats>();
+                    if (towerStats == null) 
+                        continue;
+                    GameObject project = (GameObject)Instantiate(projectile, transform.position + towerStats.shotPosition, Quaternion.identity);
                     project.GetComponent<Projectile>().setGoal(hitCollider.gameObject);
                     shotCooldown = 2;
                     break;
