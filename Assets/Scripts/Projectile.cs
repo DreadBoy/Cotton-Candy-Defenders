@@ -41,6 +41,8 @@ public class Projectile : MonoBehaviour {
             // Otherwise, continue next frame
             yield return null;
         }
+		if (goal == null)
+						Destroy (gameObject);
     }
 
     void OnTriggerEnter(Collider other)
