@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Animation))]
 public class EnemyHealth : MonoBehaviour {
 
-    public int health { get; private set; }
+    Animation animation = null;
+    public int _health { get; private set; }
+    public int health = 2;
 
 	// Use this for initialization
 	void Start () {
-        health = 2;
+        animation = GetComponent<Animation>();
+        _health = health;
 	}
 	
 	// Update is called once per frame
@@ -17,10 +21,19 @@ public class EnemyHealth : MonoBehaviour {
 
     public void takeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        _health -= damage;
+        animation.CrossFade("hit1");
+        animation.CrossFadeQueued("walk");
+        if (_health <= 0)
         {
-            GameObject.Destroy(gameObject);
+            animation.CrossFade("death1");
+            StartCoroutine("DelayDestroy");
         }
+    }
+
+    IEnumerator DelayDestroy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject.Destroy(gameObject);
     }
 }

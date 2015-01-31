@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04abb2020daa9a442a72924b7e3ba0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 138642, guid: 7afb829a88384c747977d0aced473bda, type: 2}
+  projectile: {fileID: 138642, guid: fb7229a6ebc143349b5ee136b54aa0b3, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
