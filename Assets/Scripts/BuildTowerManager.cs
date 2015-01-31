@@ -10,6 +10,7 @@ public class BuildTowerManager : MonoBehaviour
     void Start()
     {
         towerPrefabs.Add(TowerType.brute, Resources.Load<GameObject>("Prefabs/BruteTower"));
+        towerPrefabs.Add(TowerType.mage, Resources.Load<GameObject>("Prefabs/MageTower"));
     }
 
     public static void buildTower(TowerType type, Vector3 position)

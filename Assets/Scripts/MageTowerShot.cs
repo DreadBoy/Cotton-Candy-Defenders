@@ -4,7 +4,7 @@ using System.Collections;
 public class MageTowerShot : MonoBehaviour
 {
 
-    public float shotCooldown = 0;
+    float shotCooldown = 0;
     public GameObject projectile;
     private Vector3 shotPosition;
 
