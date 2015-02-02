@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour {
     public int _health { get; private set; }
     public int health = 2;
 
+    public GameObject goldEarned;
+
 	// Use this for initialization
 	void Start () {
         animation = GetComponent<Animation>();
@@ -28,6 +30,7 @@ public class EnemyHealth : MonoBehaviour {
         {
             animation.CrossFade("death1");
             StartCoroutine("DelayDestroy");
+            Instantiate(goldEarned, Vector3.zero, Quaternion.identity);
         }
     }
 
@@ -35,5 +38,12 @@ public class EnemyHealth : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         GameObject.Destroy(gameObject);
+    }
+
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(Screen.width - 100, Screen.height - 100, 100, 100), "Gold"))
+            Instantiate(goldEarned, Vector3.zero, Quaternion.identity);
+
     }
 }
