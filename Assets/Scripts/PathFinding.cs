@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class PathFinding : MonoBehaviour
 {
     Vector3 goal = Vector3.zero;
-    // Use this for initialization
+	NavMeshAgent agent = null;
+
     void Start()
     {
         goal = GameObject.Find("goal").transform.position;
-        var agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(goal);
+		agent = GetComponent<NavMeshAgent>();
+		if(agent != null)
+        	agent.SetDestination(goal);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+	public void Stop(){
+		if(agent != null)
+			agent.Stop();
+	}
 }

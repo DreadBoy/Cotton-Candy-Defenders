@@ -2,17 +2,21 @@
 using System.Collections;
 
 [RequireComponent(typeof(Animation))]
+[RequireComponent(typeof(PathFinding))]
 public class EnemyHealth : MonoBehaviour {
 
-    Animation animation = null;
+    Animation animationController = null;
+	PathFinding pathFinding = null;
     public int _health { get; private set; }
     public int health = 2;
 
-    public GameObject goldEarned;
+    GameObject goldEarned = null;
 
 	// Use this for initialization
 	void Start () {
-        animation = GetComponent<Animation>();
+		animationController = GetComponent<Animation>();
+		pathFinding = GetComponent<PathFinding>();
+		goldEarned = Resources.Load<GameObject> ("Prefabs/GoldEarn");
         _health = health;
 	}
 	
@@ -24,14 +28,17 @@ public class EnemyHealth : MonoBehaviour {
     public void takeDamage(int damage)
     {
         _health -= damage;
-        animation.CrossFade("hit1");
-        animation.CrossFadeQueued("walk");
+		animationController.CrossFade("hit1");
+		animationController.CrossFadeQueued("walk");
         if (_health <= 0)
         {
-            animation.CrossFade("death1");
+			pathFinding.Stop();
+			animationController.CrossFade("death1");
             StartCoroutine("DelayDestroy");
-            Instantiate(goldEarned, Vector3.zero, Quaternion.identity);
-        }
+			var gold = (GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity);// .Start(transform.position);
+			var goldScript = gold.GetComponent<GoldEarn>();
+			goldScript.Start(transform.position);
+		}
     }
 
     IEnumerator DelayDestroy()

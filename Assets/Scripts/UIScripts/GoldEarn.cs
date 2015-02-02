@@ -3,42 +3,58 @@ using System.Collections;
 
 public class GoldEarn : MonoBehaviour {
 
-    public GUISkin skin;
+	bool instantiated = false;
 
-    private bool showing = false;
-    private Vector2 position = Vector2.zero;
-    private Vector2 goal = Vector2.zero;
+
+	public GUISkin skin;
+	private float opacity = 1f;
+	Color guiColor;
+
+	private Rect area = new Rect(500, 500, 100, 100);
+	private Vector2 position = new Vector2(500, 500);
+	private Vector2 goal = Vector2.zero;
 
     private Texture2D goldTexture = null;
 
 	// Use this for initialization
 	void Start () {
         goldTexture = Resources.Load<Texture2D>("GUI skin/gold");
-        //StartCoroutine("DelayDestroy");
-        StartCoroutine("Move");
-        position = transform.position;
-        goal = position + (Vector2)(Vector3.down * 50);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
-    void OnGUI()
+	public void Start(Vector3 pos){
+		position = Camera.main.WorldToScreenPoint (pos);
+		goal.y -= 100;
+		area.x = position.x;
+		area.y = position.y;
+		StartCoroutine("Move");
+		instantiated = true;
+
+	}
+
+	void FixedUpdate(){
+		area.x = position.x;
+		area.y = position.y;
+	}
+
+	void OnGUI()
     {
+		if (!instantiated)
+			return;
+
         GUI.skin = skin;
 
-        GUILayout.BeginArea()
-
+		GUILayout.BeginArea (area);
         GUILayout.BeginHorizontal();
 
+		guiColor = GUI.color;
+		guiColor.a = opacity;
+		GUI.color = guiColor;
 
         GUILayout.Label("+150", new GUIStyle(skin.label) { fixedHeight = 30, fontSize = 16 });
-
         GUILayout.Label(goldTexture, GUILayout.Height(30));
 
         GUILayout.EndHorizontal();
+		GUILayout.EndArea ();
     }
 
     private IEnumerator DelayDestroy()
@@ -53,10 +69,11 @@ public class GoldEarn : MonoBehaviour {
         while (true)
         {
             timeSinceStarted += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, goal, timeSinceStarted / 2);
+            position = Vector2.Lerp(position, goal, timeSinceStarted / 4);
+			opacity -= Time.deltaTime;
 
             // If the object has arrived, stop the coroutine
-            if (transform.position == goal)
+            if (position == goal)
             {
                 GameObject.Destroy(gameObject);
                 yield break;
