@@ -14,7 +14,7 @@ Platform assembly: E:\Users\Dread\Documents\GitHub\Cotton-Candy-Defenders\Build\
 Loading E:\Users\Dread\Documents\GitHub\Cotton-Candy-Defenders\Build\Prototype_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: E:\Users\Dread\Documents\GitHub\Cotton-Candy-Defenders\Build\Prototype_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading E:\Users\Dread\Documents\GitHub\Cotton-Candy-Defenders\Build\Prototype_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.070 seconds
+- Completed reload, in  0.053 seconds
 desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
