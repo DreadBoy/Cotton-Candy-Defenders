@@ -48,10 +48,11 @@ public class Projectile : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy"){
-            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
+            EnemyStats enemyStats = other.GetComponent<EnemyStats>();
+            EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
+            if (enemyStats.health != null)
             {
-                enemyHealth.takeDamage(1);
+                enemyBehaviour.takeDamage(1);
                 GameObject.Destroy(gameObject);
 
             }
