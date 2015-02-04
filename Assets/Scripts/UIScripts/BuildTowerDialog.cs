@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BuildTowerDialog : MonoBehaviour {
 
-    public GUISkin skin;
+    GUISkin skin;
     private Rect windowRect = new Rect(0, 0, 180, 70);
     private bool opened;
 
@@ -21,6 +21,8 @@ public class BuildTowerDialog : MonoBehaviour {
         bruteTowerIcon = Resources.Load<Texture2D>("GUI skin/icon_sword");
         mageTowerIcon = Resources.Load<Texture2D>("GUI skin/icon_crosshair");
         crossIcon = Resources.Load<Texture2D>("GUI skin/icon_cross");
+
+        skin = Resources.Load<GUISkin>("GUI skin/CCD");
 	
 	}
 	
@@ -46,13 +48,19 @@ public class BuildTowerDialog : MonoBehaviour {
         GUILayout.BeginHorizontal();
         if (GUILayout.Button(bruteTowerIcon, GUILayout.Width(50), GUILayout.Height(50)))
         {
-            BuildTowerManager.buildTower(TowerType.brute, caller.transform.position);
+            GameObject tower = BuildTowerManager.buildTower(TowerType.brute, caller.transform.position);
+            if (tower == null)
+                return;
+            tower.GetComponent<TowerStats>().spot = caller;
             caller.SetActive(false);
             this.Close();
         }
         if (GUILayout.Button(mageTowerIcon, GUILayout.Width(50), GUILayout.Height(50)))
         {
-            BuildTowerManager.buildTower(TowerType.mage, caller.transform.position);
+            GameObject tower = BuildTowerManager.buildTower(TowerType.mage, caller.transform.position);
+            if (tower == null)
+                return;
+            tower.GetComponent<TowerStats>().spot = caller;
             caller.SetActive(false);
             this.Close();
         }

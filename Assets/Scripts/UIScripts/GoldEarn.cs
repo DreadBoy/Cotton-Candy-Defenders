@@ -7,7 +7,7 @@ public class GoldEarn : MonoBehaviour
     bool instantiated = false;
 
 
-    public GUISkin skin;
+    GUISkin skin;
     private float opacity = 1f;
     Color guiColor;
 
@@ -21,6 +21,8 @@ public class GoldEarn : MonoBehaviour
     void Start()
     {
         goldTexture = Resources.Load<Texture2D>("GUI skin/gold");
+
+        skin = Resources.Load<GUISkin>("GUI skin/CCD");
     }
 
     public void Start(Vector3 pos)

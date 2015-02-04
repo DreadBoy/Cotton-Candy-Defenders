@@ -13,15 +13,15 @@ public class BuildTowerManager : MonoBehaviour
         towerPrefabs.Add(TowerType.mage, Resources.Load<GameObject>("Prefabs/MageTower"));
     }
 
-    public static void buildTower(TowerType type, Vector3 position)
+    public static GameObject buildTower(TowerType type, Vector3 position)
     {
         if (!towerPrefabs.ContainsKey(type))
-            return;
+            return null;
         TowerStats towerStats = towerPrefabs[type].GetComponent<TowerStats>();
         if (towerStats != null)
-        {
-            Instantiate(towerPrefabs[type], position, towerPrefabs[type].transform.rotation);
-        }
+            return (GameObject)Instantiate(towerPrefabs[type], position, towerPrefabs[type].transform.rotation);
+        else
+            return null;
     }
 }
 

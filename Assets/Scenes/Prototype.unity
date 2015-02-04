@@ -489,6 +489,7 @@ GameObject:
   - 54: {fileID: 47623613}
   - 65: {fileID: 47623612}
   - 114: {fileID: 47623611}
+  - 114: {fileID: 47623617}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Spot
@@ -508,7 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ec2558aaf54ee43b210d7ed2a6e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTowerDialog: {fileID: 420434461}
 --- !u!65 &47623612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -578,7 +578,19 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
+--- !u!114 &47623617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475500, guid: 154f460d1e44cf24cb6d3dcea7caf468,
+    type: 2}
+  m_PrefabInternal: {fileID: 850378442}
+  m_GameObject: {fileID: 47623610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5483ce2a549f11541b0b20450cee39b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &49748213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,7 +3382,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 10
 --- !u!1 &369993945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,7 +3652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: tower
@@ -3649,7 +3661,7 @@ Prefab:
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: buildTowerDialog
       value: 
-      objectReference: {fileID: 420434461}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
   m_RootGameObject: {fileID: 2068302910}
@@ -3770,46 +3782,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 946419115}
   m_RootOrder: 0
---- !u!1 &420434459
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 420434460}
-  - 114: {fileID: 420434461}
-  m_Layer: 0
-  m_Name: BuildTowerDialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &420434460
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 420434459}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 234.910004, y: 273.420013, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &420434461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 420434459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5483ce2a549f11541b0b20450cee39b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skin: {fileID: 11400000, guid: ca274400cfd42c346be090aee467aa8c, type: 2}
 --- !u!1 &423501186
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,7 +4463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &483266634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
       propertyPath: m_LocalScale.x
@@ -5755,7 +5727,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: tower
@@ -5764,7 +5736,7 @@ Prefab:
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: buildTowerDialog
       value: 
-      objectReference: {fileID: 420434461}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
   m_RootGameObject: {fileID: 1629935690}
@@ -8509,7 +8481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: tower
@@ -8518,7 +8490,7 @@ Prefab:
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: buildTowerDialog
       value: 
-      objectReference: {fileID: 420434461}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
   m_RootGameObject: {fileID: 47623610}
@@ -9080,6 +9052,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 900251090}
   - 114: {fileID: 900251089}
+  - 114: {fileID: 900251091}
   m_Layer: 0
   m_Name: GoldEarn
   m_TagString: Untagged
@@ -9099,7 +9072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d995f328ddaf3db40b69ef74584fe0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 11400000, guid: ca274400cfd42c346be090aee467aa8c, type: 2}
 --- !u!4 &900251090
 Transform:
   m_ObjectHideFlags: 0
@@ -9111,7 +9083,18 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
+--- !u!114 &900251091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900251088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ca34505150ed247b9231983fd50212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &901950925
 GameObject:
   m_ObjectHideFlags: 0
@@ -10160,7 +10143,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: tower
@@ -10169,7 +10152,7 @@ Prefab:
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: buildTowerDialog
       value: 
-      objectReference: {fileID: 420434461}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
   m_RootGameObject: {fileID: 1650070701}
@@ -13127,7 +13110,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: tower
@@ -13136,7 +13119,7 @@ Prefab:
     - target: {fileID: 11420254, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
       propertyPath: buildTowerDialog
       value: 
-      objectReference: {fileID: 420434461}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 154f460d1e44cf24cb6d3dcea7caf468, type: 2}
   m_RootGameObject: {fileID: 1661351671}
@@ -17003,6 +16986,7 @@ GameObject:
   - 54: {fileID: 1629935693}
   - 65: {fileID: 1629935692}
   - 114: {fileID: 1629935691}
+  - 114: {fileID: 1629935697}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Spot
@@ -17022,7 +17006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ec2558aaf54ee43b210d7ed2a6e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTowerDialog: {fileID: 420434461}
 --- !u!65 &1629935692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17092,7 +17075,19 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
+--- !u!114 &1629935697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475500, guid: 154f460d1e44cf24cb6d3dcea7caf468,
+    type: 2}
+  m_PrefabInternal: {fileID: 576985289}
+  m_GameObject: {fileID: 1629935690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5483ce2a549f11541b0b20450cee39b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633176771
 GameObject:
   m_ObjectHideFlags: 0
@@ -17310,6 +17305,7 @@ GameObject:
   - 54: {fileID: 1650070704}
   - 65: {fileID: 1650070703}
   - 114: {fileID: 1650070702}
+  - 114: {fileID: 1650070708}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Spot
@@ -17329,7 +17325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ec2558aaf54ee43b210d7ed2a6e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTowerDialog: {fileID: 420434461}
 --- !u!65 &1650070703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17399,7 +17394,19 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
+--- !u!114 &1650070708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475500, guid: 154f460d1e44cf24cb6d3dcea7caf468,
+    type: 2}
+  m_PrefabInternal: {fileID: 984404799}
+  m_GameObject: {fileID: 1650070701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5483ce2a549f11541b0b20450cee39b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1650243081
 GameObject:
   m_ObjectHideFlags: 0
@@ -17585,6 +17592,7 @@ GameObject:
   - 54: {fileID: 1661351674}
   - 65: {fileID: 1661351673}
   - 114: {fileID: 1661351672}
+  - 114: {fileID: 1661351678}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Spot
@@ -17604,7 +17612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ec2558aaf54ee43b210d7ed2a6e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTowerDialog: {fileID: 420434461}
 --- !u!65 &1661351673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17674,7 +17681,19 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
+--- !u!114 &1661351678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475500, guid: 154f460d1e44cf24cb6d3dcea7caf468,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321598603}
+  m_GameObject: {fileID: 1661351671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5483ce2a549f11541b0b20450cee39b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1668998444
 GameObject:
   m_ObjectHideFlags: 0
@@ -18181,7 +18200,7 @@ Transform:
   - {fileID: 2100293924}
   - {fileID: 1809898970}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!111 &1725898722
 Animation:
   m_ObjectHideFlags: 0
@@ -23898,6 +23917,7 @@ GameObject:
   - 54: {fileID: 2068302915}
   - 65: {fileID: 2068302912}
   - 114: {fileID: 2068302916}
+  - 114: {fileID: 2068302917}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Spot
@@ -23958,7 +23978,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!54 &2068302915
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23987,7 +24007,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ec2558aaf54ee43b210d7ed2a6e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTowerDialog: {fileID: 420434461}
+--- !u!114 &2068302917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475500, guid: 154f460d1e44cf24cb6d3dcea7caf468,
+    type: 2}
+  m_PrefabInternal: {fileID: 409342452}
+  m_GameObject: {fileID: 2068302910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5483ce2a549f11541b0b20450cee39b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2071116842
 GameObject:
   m_ObjectHideFlags: 0
