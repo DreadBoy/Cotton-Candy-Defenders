@@ -28,14 +28,17 @@ public class EnemyBehaviour : MonoBehaviour {
     public void takeDamage(int damage)
     {
         enemyStats.health -= damage;
-        animationController.CrossFade("hit1");
-        animationController.CrossFadeQueued("walk");
         if (enemyStats.health <= 0)
         {
             pathFinding.Stop();
             animationController.CrossFade("death1");
             StartCoroutine("DelayDestroy");
             ((GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity)).GetComponent<GoldEarn>().Start(transform.position);
+        }
+        else
+        {
+            animationController.CrossFade("hit1");
+            animationController.CrossFadeQueued("walk");
         }
     }
 

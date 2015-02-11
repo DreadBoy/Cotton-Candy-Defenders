@@ -2,20 +2,23 @@
 using System.Collections;
 
 [RequireComponent(typeof(TrailRenderer))]
-public class Projectile : MonoBehaviour {
+public class Projectile : MonoBehaviour
+{
 
     private GameObject goal;
     private TrailRenderer trail;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         trail = GetComponent<TrailRenderer>();
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-	    
-	}
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+
+    }
 
     public void setGoal(GameObject _goal)
     {
@@ -41,21 +44,19 @@ public class Projectile : MonoBehaviour {
             // Otherwise, continue next frame
             yield return null;
         }
-		if (goal == null)
-						Destroy (gameObject);
+        if (goal == null)
+            Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy"){
-            EnemyStats enemyStats = other.GetComponent<EnemyStats>();
+        if (other.tag == "Enemy")
+        {
             EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
-            if (enemyStats.health != null)
-            {
-                enemyBehaviour.takeDamage(1);
-                GameObject.Destroy(gameObject);
+             
+            enemyBehaviour.takeDamage(1);
+            GameObject.Destroy(gameObject);
 
-            }
         }
     }
 }
