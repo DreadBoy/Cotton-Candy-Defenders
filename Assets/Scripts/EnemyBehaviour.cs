@@ -11,6 +11,8 @@ public class EnemyBehaviour : MonoBehaviour {
     EnemyStats enemyStats = null;
 
     GameObject goldEarned = null;
+
+	LevelBehaviour levelBehaviour = null;
 	// Use this for initialization
 	void Start () {
 
@@ -19,6 +21,8 @@ public class EnemyBehaviour : MonoBehaviour {
         enemyStats = GetComponent<EnemyStats>();
 
         goldEarned = Resources.Load<GameObject>("Prefabs/GoldEarn");
+
+		levelBehaviour = GameObject.Find("Level").GetComponent<LevelBehaviour>();
 	}
 	
 	// Update is called once per frame
@@ -47,5 +51,6 @@ public class EnemyBehaviour : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         GameObject.Destroy(gameObject);
+		levelBehaviour.monsterKilled();
     }
 }

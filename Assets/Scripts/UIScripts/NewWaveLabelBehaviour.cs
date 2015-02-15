@@ -2,25 +2,30 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class WaveLabelBehaviour : MonoBehaviour
+public class NewWaveLabelBehaviour : MonoBehaviour
 {
     Text label;
     RectTransform rectTransform;
+	WaveManager waveManager = null;
     void Awake()
     {
         label = GetComponent<Text>();
         rectTransform = GetComponent<RectTransform>();
+		waveManager = GameObject.Find("Level").GetComponent<WaveManager>();
     }
 
+	/// <summary>
+	/// Start animating the label
+	/// </summary>
+	public void Begin(){
+		gameObject.SetActive(true);
+		rectTransform.localPosition = Vector3.zero;
+		rectTransform.localScale = Vector3.zero;
 
-    public void setText(int wave)
-    {
-        label.text = "Wave " + wave;
-        rectTransform.localPosition = Vector3.zero;
-        rectTransform.localScale = Vector3.zero;
-        StartCoroutine("ScaleIn");
+		label.text = "Wave " + waveManager.waveNum;
 
-    }
+		StartCoroutine("ScaleIn");
+	}
 
     private IEnumerator ScaleIn()
     {
@@ -39,10 +44,10 @@ public class WaveLabelBehaviour : MonoBehaviour
                 rectTransform.localScale = new Vector3(1 - (timeSinceStarted - 3), 1 - (timeSinceStarted - 3), 1 - (timeSinceStarted - 3));
                 rectTransform.localPosition = new Vector3(0, (timeSinceStarted - 3) * (Screen.height / 2), 0);
             }
-            else if (timeSinceStarted >= 4)
-                Destroy(gameObject);
-            else
+			else if (timeSinceStarted >= 4){
+				gameObject.SetActive(false);
                 yield break;
+			}
 
 
             // Otherwise, continue next frame
