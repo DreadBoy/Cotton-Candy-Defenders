@@ -30,7 +30,6 @@ public class WaveManager : MonoBehaviour
 			waveUI.endLevel();
 		else{
 			levelBehaviour.enableSpots();
-			Debug.Log ("Enabling");
 			waveUI.endWave();
 		}
 	}

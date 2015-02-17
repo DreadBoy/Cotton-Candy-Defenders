@@ -17,6 +17,7 @@ public class LevelBehaviour : MonoBehaviour
 	WaveManager waveManager = null;
 
 	int spawnedMonsters = 0;
+	public Boolean canBuild = false;
 
 	GameObject[] spots;
 
@@ -28,6 +29,7 @@ public class LevelBehaviour : MonoBehaviour
 		prefabs.Add(LevelStats.Monster.Type.Spider, Resources.Load<GameObject>("Prefabs/Enemies/Spider"));
 
 		spots = GameObject.FindGameObjectsWithTag("Spot");
+		disableSpots();
     }
 
     public void SpawnMonsters()
@@ -66,13 +68,15 @@ public class LevelBehaviour : MonoBehaviour
 
 	public void disableSpots ()
 	{
+		canBuild = false;
 		foreach(var spot in spots)
 			spot.SetActive(false);
 	}
 
 	public void enableSpots ()
 	{
+		canBuild = true;
 		foreach(var spot in spots)
-			spot.SetActive(false);
+			spot.SetActive(true);
 	}
 }

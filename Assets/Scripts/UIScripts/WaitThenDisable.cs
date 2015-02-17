@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(CanvasGroup))]
 public class WaitThenDisable : MonoBehaviour {
 
 	void Start()
@@ -14,6 +15,9 @@ public class WaitThenDisable : MonoBehaviour {
 		yield return 0;
 
 		gameObject.SetActive(false);
+		var canvasGroup = GetComponent<CanvasGroup>();
+		if(canvasGroup != null)
+			canvasGroup.alpha = 1;
 		
 		
 	}

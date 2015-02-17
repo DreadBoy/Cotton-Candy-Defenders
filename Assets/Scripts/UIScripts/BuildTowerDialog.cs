@@ -50,8 +50,8 @@ public class BuildTowerDialog : MonoBehaviour {
         {
             GameObject tower = BuildTowerManager.buildTower(TowerType.brute, caller.transform.position);
             if (tower == null)
-                return;
-            tower.GetComponent<TowerStats>().spot = caller;
+				return;
+			tower.GetComponent<TowerStats>().spot = caller;
             caller.SetActive(false);
             this.Close();
         }
