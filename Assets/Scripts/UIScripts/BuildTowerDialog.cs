@@ -48,7 +48,7 @@ public class BuildTowerDialog : MonoBehaviour {
         GUILayout.BeginHorizontal();
         if (GUILayout.Button(bruteTowerIcon, GUILayout.Width(50), GUILayout.Height(50)))
         {
-            GameObject tower = BuildTowerManager.buildTower(TowerType.brute, caller.transform.position);
+            GameObject tower = BuildTowerManager.buildTower(TowerType.basic, caller.transform.position);
             if (tower == null)
 				return;
 			tower.GetComponent<TowerStats>().spot = caller;
@@ -57,7 +57,7 @@ public class BuildTowerDialog : MonoBehaviour {
         }
         if (GUILayout.Button(mageTowerIcon, GUILayout.Width(50), GUILayout.Height(50)))
         {
-            GameObject tower = BuildTowerManager.buildTower(TowerType.mage, caller.transform.position);
+            GameObject tower = BuildTowerManager.buildTower(TowerType.slow, caller.transform.position);
             if (tower == null)
                 return;
             tower.GetComponent<TowerStats>().spot = caller;

@@ -8,6 +8,7 @@ public class LevelStats : MonoBehaviour {
 
     public DoorSpawn[] doors;
     public Boolean ready = false;
+	public int level = 1;
 
     void Start()
     {

@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(BuildTowerDialog))]
 public class SpotClick : MonoBehaviour
 {
-    BuildTowerDialog buildTowerDialog;
+	BuildTowerLabelBehaviour buildTowerDialog;
 
     // Use this for initialization
     void Start()
     {
-        buildTowerDialog = GetComponent<BuildTowerDialog>();
+		buildTowerDialog = GameObject.Find ("BuildTowerLabel").GetComponent<BuildTowerLabelBehaviour>();
     }
 
     // Update is called once per frame
