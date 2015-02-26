@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(TowerStats))]
 public class TowerShot : MonoBehaviour
 {
 
     float shotCooldown = 0;
     public GameObject projectile;
     private Vector3 shotPosition;
+	TowerStats towerStats = null;
 
     void Start()
     {
+		towerStats = GetComponent<TowerStats>();
     }
 
     void FixedUpdate()
@@ -28,7 +31,7 @@ public class TowerShot : MonoBehaviour
                         continue;
                     GameObject project = (GameObject)Instantiate(projectile, transform.position + towerStats.shotPosition, Quaternion.identity);
                     project.GetComponent<Projectile>().setGoal(hitCollider.gameObject);
-                    shotCooldown = 2;
+                    shotCooldown = 4 - towerStats.level;
                     break;
                 }
             }

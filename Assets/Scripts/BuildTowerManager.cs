@@ -9,8 +9,14 @@ public class BuildTowerManager : MonoBehaviour
 
     void Start()
     {
-        towerPrefabs.Add(TowerType.brute, Resources.Load<GameObject>("Prefabs/BruteTower"));
-        towerPrefabs.Add(TowerType.mage, Resources.Load<GameObject>("Prefabs/MageTower"));
+        towerPrefabs.Add(TowerType.basic, Resources.Load<GameObject>("Prefabs/Towers/BasicTower"));
+        towerPrefabs.Add(TowerType.slow, Resources.Load<GameObject>("Prefabs/Towers/SlowingTower"));
+        towerPrefabs.Add(TowerType.stun, Resources.Load<GameObject>("Prefabs/Towers/StunningTower"));
+        towerPrefabs.Add(TowerType.pierce, Resources.Load<GameObject>("Prefabs/Towers/PiercingTower"));
+        towerPrefabs.Add(TowerType.poison, Resources.Load<GameObject>("Prefabs/Towers/PoisonedTower"));
+        towerPrefabs.Add(TowerType.fear, Resources.Load<GameObject>("Prefabs/Towers/FearTower"));
+        towerPrefabs.Add(TowerType.charm, Resources.Load<GameObject>("Prefabs/Towers/CharmTower"));
+        
     }
 
     public static GameObject buildTower(TowerType type, Vector3 position)
@@ -27,6 +33,11 @@ public class BuildTowerManager : MonoBehaviour
 
 public enum TowerType
 {
-    brute,
-    mage
+    basic,
+	slow,
+	stun,
+	pierce,
+	poison,
+	fear,
+	charm
 }
