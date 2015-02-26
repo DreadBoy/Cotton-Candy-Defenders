@@ -12,7 +12,6 @@ public class TowerUpgrade : MonoBehaviour
 
     GUISkin skin;
 	GameObject starPrefab = null;
-
 	GameObject canvas = null;
 
     TowerUpgradeDialog upgradeTowerDialog = null;
@@ -27,10 +26,10 @@ public class TowerUpgrade : MonoBehaviour
 		levelBehaviour = GameObject.Find("Level").GetComponent<LevelBehaviour>();
 
 		starPrefab = Resources.Load<GameObject>("GUI skin/star_gold");
+		var canvasPrefab = Resources.Load<GameObject>("GUI skin/canvas_tower_upgrade");
+		canvas = (GameObject)Instantiate(canvasPrefab);
 
         skin = Resources.Load<GUISkin>("GUI skin/CCD");
-
-		canvas = GameObject.Find("Canvas - Tower Upgrades");
 
 		displayStars();
     }
@@ -41,18 +40,27 @@ public class TowerUpgrade : MonoBehaviour
 		}
 		stars.Clear();
 
-		
-		Vector3 position = Camera.main.WorldToScreenPoint(towerStats.transform.position + towerStats.shotPosition);
-		position.y = Screen.height - position.y;
+		canvas.transform.SetParent(gameObject.transform);
+
+		Vector3 position = Vector3.zero;
+
 		var width = towerStats.level * 20;
-		position.y += 20;
+		position.z = towerStats.shotPosition.y;
 		position.x = position.x - width / 2 + 10;
 		Vector3 offset = Vector3.zero;
 
+		canvas.GetComponent<RectTransform>().localPosition = position;
+		canvas.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 15);
+
 		for (int i = 0; i < towerStats.level; i++) {
 			stars.Add((GameObject)Instantiate(starPrefab, Vector3.zero, Quaternion.identity));
-			stars[stars.Count - 1].GetComponent<RectTransform>().localPosition = position + offset;
+
 			stars[stars.Count - 1].transform.SetParent(canvas.transform);
+
+			var rectTransform = stars[stars.Count - 1].GetComponent<RectTransform>();
+			rectTransform.localPosition = Vector3.zero + offset;
+			rectTransform.localRotation = Quaternion.identity;
+
 			offset.x += 20;
 		}
 	}
