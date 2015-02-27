@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97671621f6c2c254ca1485123cf040f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPosition: {x: 0, y: 0, z: 0}
+  shotPosition: {x: 0, y: 60, z: 0}
   level: 1
   spot: {fileID: 0}
 --- !u!114 &11481248

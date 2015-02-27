@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 420906}
-  - 114: {fileID: 11420940}
   - 114: {fileID: 11420942}
-  - 114: {fileID: 11420944}
   - 114: {fileID: 11420946}
+  - 114: {fileID: 11420940}
+  - 114: {fileID: 11420944}
   - 65: {fileID: 6590280}
   m_Layer: 0
   m_Name: BasicTower
@@ -1037,8 +1037,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 32, y: 32, z: 50}
+  m_Center: {x: 0, y: 0, z: 25}
 --- !u!114 &11420940
 MonoBehaviour:
   m_ObjectHideFlags: 1

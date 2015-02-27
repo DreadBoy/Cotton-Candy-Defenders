@@ -3,23 +3,18 @@ using System.Collections;
 
 public class SpotClick : MonoBehaviour
 {
-	BuildTowerLabelBehaviour buildTowerDialog;
+	BuildTowerUI buildTowerUI;
 
     // Use this for initialization
     void Start()
     {
-		buildTowerDialog = GameObject.Find ("BuildTowerLabel").GetComponent<BuildTowerLabelBehaviour>();
+		buildTowerUI = GameObject.Find ("Canvas - Tower Upgrades").GetComponent<BuildTowerUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void OnMouseDown()
     {
-        if (buildTowerDialog != null)
-            buildTowerDialog.setCaller(gameObject).Open();
+		if (buildTowerUI != null)
+			buildTowerUI.setCaller(gameObject).Open();
     }
 }

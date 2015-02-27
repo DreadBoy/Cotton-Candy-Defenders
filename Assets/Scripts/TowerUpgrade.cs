@@ -10,7 +10,6 @@ public class TowerUpgrade : MonoBehaviour
 
     TowerStats towerStats = null;
 
-    GUISkin skin;
 	GameObject starPrefab = null;
 	GameObject canvas = null;
 
@@ -28,8 +27,6 @@ public class TowerUpgrade : MonoBehaviour
 		starPrefab = Resources.Load<GameObject>("GUI skin/star_gold");
 		var canvasPrefab = Resources.Load<GameObject>("GUI skin/canvas_tower_upgrade");
 		canvas = (GameObject)Instantiate(canvasPrefab);
-
-        skin = Resources.Load<GUISkin>("GUI skin/CCD");
 
 		displayStars();
     }
