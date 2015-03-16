@@ -9,7 +9,7 @@ public class PathFinding : MonoBehaviour
 
     void Start()
     {
-        goal = GameObject.Find("goal").transform.position;
+        goal = GameObject.FindGameObjectWithTag("Goal").transform.position;
 		agent = GetComponent<NavMeshAgent>();
 		if(agent != null)
             agent.SetDestination(goal);

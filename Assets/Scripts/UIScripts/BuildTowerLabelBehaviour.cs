@@ -13,7 +13,7 @@ public class BuildTowerLabelBehaviour : MonoBehaviour {
 	private GameObject spot;
 
 	void Start () {
-		GameObject level = GameObject.Find ("Level");
+		GameObject level = GameObject.FindGameObjectWithTag ("Level");
 		if(level == null)
 			return;
 		int levelNum = level.GetComponent<LevelStats>().level;

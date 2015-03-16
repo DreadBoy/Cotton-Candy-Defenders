@@ -11,7 +11,7 @@ public class NewWaveLabelBehaviour : MonoBehaviour
     {
         label = GetComponent<Text>();
         rectTransform = GetComponent<RectTransform>();
-		waveManager = GameObject.Find("Level").GetComponent<WaveManager>();
+		waveManager = GameObject.FindGameObjectWithTag("Level").GetComponent<WaveManager>();
     }
 
 	/// <summary>

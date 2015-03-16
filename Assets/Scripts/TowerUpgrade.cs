@@ -22,7 +22,7 @@ public class TowerUpgrade : MonoBehaviour
     {
         towerStats = GetComponent<TowerStats>();
         upgradeTowerDialog = GetComponent<TowerUpgradeDialog>();
-		levelBehaviour = GameObject.Find("Level").GetComponent<LevelBehaviour>();
+		levelBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<LevelBehaviour>();
 
 		starPrefab = Resources.Load<GameObject>("GUI skin/star_gold");
 		var canvasPrefab = Resources.Load<GameObject>("GUI skin/canvas_tower_upgrade");
@@ -43,11 +43,11 @@ public class TowerUpgrade : MonoBehaviour
 
 		var width = towerStats.level * 20;
 		position.z = towerStats.shotPosition.y;
-		position.x = position.x - width / 2 + 10;
-		Vector3 offset = Vector3.zero;
 
 		canvas.GetComponent<RectTransform>().localPosition = position;
 		canvas.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 15);
+
+		Vector3 offset = Vector3.zero;
 
 		for (int i = 0; i < towerStats.level; i++) {
 			stars.Add((GameObject)Instantiate(starPrefab, Vector3.zero, Quaternion.identity));
@@ -55,7 +55,7 @@ public class TowerUpgrade : MonoBehaviour
 			stars[stars.Count - 1].transform.SetParent(canvas.transform);
 
 			var rectTransform = stars[stars.Count - 1].GetComponent<RectTransform>();
-			rectTransform.localPosition = Vector3.zero + offset;
+			rectTransform.anchoredPosition = Vector3.zero + offset;
 			rectTransform.localRotation = Quaternion.identity;
 
 			offset.x += 20;

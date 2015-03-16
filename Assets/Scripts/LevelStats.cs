@@ -13,7 +13,7 @@ public class LevelStats : MonoBehaviour {
     void Start()
     {
         //find all doors and assign spawn points to them
-        doors = GameObject.FindGameObjectsWithTag("Door").Select<GameObject, DoorSpawn>(g => new DoorSpawn(g.transform.position, "Vrata")).ToArray<DoorSpawn>();
+        doors = GameObject.FindGameObjectsWithTag("Spawn").Select<GameObject, DoorSpawn>(g => new DoorSpawn(g.transform.position, "Vrata")).ToArray<DoorSpawn>();
 		doors[0].addLevel(new Monster[]{new Monster(Monster.Type.Spider)});
 		doors[0].addLevel(new Monster[]{new Monster(Monster.Type.Spider), new Monster(Monster.Type.Spider), new Monster(Monster.Type.Spider)});
         ready = true;

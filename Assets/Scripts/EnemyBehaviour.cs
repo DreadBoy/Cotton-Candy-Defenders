@@ -22,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
         goldEarned = Resources.Load<GameObject>("Prefabs/GoldEarn");
 
-		levelBehaviour = GameObject.Find("Level").GetComponent<LevelBehaviour>();
+		levelBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<LevelBehaviour>();
 	}
 	
 	// Update is called once per frame

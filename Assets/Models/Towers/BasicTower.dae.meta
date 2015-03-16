@@ -24,6 +24,12 @@ ModelImporter:
     100036: instance_1
     100038: instance_2
     100040: instance_3
+    100042: Group18
+    100044: Group80
+    100046: Group88
+    100048: ID62
+    100050: ID68
+    100052: SlowingTower
     400000: //RootNode
     400002: Component_4
     400004: Group16
@@ -45,6 +51,12 @@ ModelImporter:
     400036: instance_1
     400038: instance_2
     400040: instance_3
+    400042: Group18
+    400044: Group80
+    400046: Group88
+    400048: ID62
+    400050: ID68
+    400052: SlowingTower
     2300000: Group16
     2300002: Group54
     2300004: Group82
@@ -60,6 +72,11 @@ ModelImporter:
     2300024: ID74
     2300026: ID88
     2300028: ID94
+    2300030: Group18
+    2300032: Group80
+    2300034: Group88
+    2300036: ID62
+    2300038: ID68
     3300000: Group16
     3300002: Group54
     3300004: Group82
@@ -75,6 +92,11 @@ ModelImporter:
     3300024: ID74
     3300026: ID88
     3300028: ID94
+    3300030: Group18
+    3300032: Group80
+    3300034: Group88
+    3300036: ID62
+    3300038: ID68
     4300000: Group54
     4300002: ID14
     4300004: ID22
@@ -90,6 +112,11 @@ ModelImporter:
     4300024: ID88
     4300026: ID94
     4300028: ID100
+    4300030: Group80
+    4300032: Group18
+    4300034: ID62
+    4300036: ID68
+    4300038: Group88
     9500000: //RootNode
   materials:
     importMaterials: 1
