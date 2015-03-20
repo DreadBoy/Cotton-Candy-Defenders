@@ -55,7 +55,7 @@ public class TowerUpgrade : MonoBehaviour
 			stars[stars.Count - 1].transform.SetParent(canvas.transform);
 
 			var rectTransform = stars[stars.Count - 1].GetComponent<RectTransform>();
-			rectTransform.anchoredPosition = Vector3.zero + offset;
+			rectTransform.anchoredPosition3D = Vector3.zero + offset;
 			rectTransform.localRotation = Quaternion.identity;
 
 			offset.x += 20;
