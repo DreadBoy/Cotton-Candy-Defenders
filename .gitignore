@@ -9,6 +9,7 @@ Library/
 # ===================================== #
 ExportedObj/
 obj/
+UnityVS/
 *.svd
 *.userprefs
 /*.csproj
@@ -29,3 +30,4 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+Assets/UnityVS.meta
