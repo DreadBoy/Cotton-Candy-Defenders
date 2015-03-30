@@ -15,6 +15,6 @@ public class SpotClick : MonoBehaviour
     void OnMouseDown()
     {
 		if (buildTowerUI != null)
-			buildTowerUI.setCaller(gameObject).Open();
+			buildTowerUI.setCaller(gameObject).OpenBuildDialog();
     }
 }

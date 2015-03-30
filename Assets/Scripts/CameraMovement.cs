@@ -49,7 +49,7 @@ public class CameraMovement : MonoBehaviour
         if(levels[level - 1].GetComponent<CameraStats>() == null)
             return;
         transform.position = levels[level - 1].transform.position;
-        camera.orthographicSize = levels[level - 1].GetComponent<CameraStats>().Size;
+        GetComponent<Camera>().orthographicSize = levels[level - 1].GetComponent<CameraStats>().Size;
     }
 
 }
