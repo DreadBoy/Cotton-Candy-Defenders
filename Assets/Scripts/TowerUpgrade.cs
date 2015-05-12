@@ -1,71 +1,75 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
 
 [RequireComponent(typeof(TowerStats))]
-[RequireComponent(typeof(TowerUpgradeDialog))]
 public class TowerUpgrade : MonoBehaviour
 {
 
     TowerStats towerStats = null;
 
-	GameObject starPrefab = null;
-	GameObject canvas = null;
+    GameObject starPrefab = null;
+    GameObject canvas = null;
 
-    TowerUpgradeDialog upgradeTowerDialog = null;
-	LevelBehaviour levelBehaviour = null;
+    BuildTowerUI buildTowerUI;
+    AreaBehaviour areaBehaviour = null;
 
-	List<GameObject> stars = new List<GameObject>();
+    List<GameObject> stars = new List<GameObject>();
 
     void Start()
     {
         towerStats = GetComponent<TowerStats>();
-        upgradeTowerDialog = GetComponent<TowerUpgradeDialog>();
-		levelBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<LevelBehaviour>();
+        buildTowerUI = GameObject.Find("Canvas - Tower Upgrades").GetComponent<BuildTowerUI>();
+        areaBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<AreaBehaviour>();
 
-		starPrefab = Resources.Load<GameObject>("GUI skin/star_gold");
-		var canvasPrefab = Resources.Load<GameObject>("GUI skin/canvas_tower_upgrade");
-		canvas = (GameObject)Instantiate(canvasPrefab);
+        starPrefab = Resources.Load<GameObject>("GUI skin/star_gold");
+        var canvasPrefab = Resources.Load<GameObject>("GUI skin/canvas_tower_upgrade");
+        canvas = (GameObject)Instantiate(canvasPrefab);
 
-		displayStars();
+        displayStars();
     }
 
-	public void displayStars(){
-		foreach(var star in stars){
-			Destroy(star);
-		}
-		stars.Clear();
+    public void displayStars()
+    {
+        foreach (var star in stars)
+        {
+            Destroy(star);
+        }
+        stars.Clear();
 
-		canvas.transform.SetParent(gameObject.transform);
+        canvas.transform.SetParent(gameObject.transform);
 
-		Vector3 position = Vector3.zero;
+        Vector3 position = Vector3.zero;
 
-		var width = towerStats.level * 20;
-		position.z = towerStats.shotPosition.y;
+        var width = towerStats.level * 20;
+        position.z = towerStats.shotPosition.y;
 
-		canvas.GetComponent<RectTransform>().localPosition = position;
-		canvas.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 15);
+        canvas.GetComponent<RectTransform>().localPosition = position;
+        canvas.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 15);
 
-		Vector3 offset = Vector3.zero;
+        Vector3 offset = Vector3.zero;
 
-		for (int i = 0; i < towerStats.level; i++) {
-			stars.Add((GameObject)Instantiate(starPrefab, Vector3.zero, Quaternion.identity));
+        for (int i = 0; i < towerStats.level; i++)
+        {
+            stars.Add((GameObject)Instantiate(starPrefab, Vector3.zero, Quaternion.identity));
 
-			stars[stars.Count - 1].transform.SetParent(canvas.transform);
+            stars[stars.Count - 1].transform.SetParent(canvas.transform);
 
-			var rectTransform = stars[stars.Count - 1].GetComponent<RectTransform>();
-			rectTransform.anchoredPosition3D = Vector3.zero + offset;
-			rectTransform.localRotation = Quaternion.identity;
+            var rectTransform = stars[stars.Count - 1].GetComponent<RectTransform>();
+            rectTransform.anchoredPosition3D = Vector3.zero + offset;
+            rectTransform.localRotation = Quaternion.identity;
 
-			offset.x += 20;
-		}
-	}
+            offset.x += 20;
+        }
+    }
 
     void OnMouseDown()
     {
-		if (upgradeTowerDialog != null && levelBehaviour.canBuild)
-            upgradeTowerDialog.setCaller(this).Toggle();
+        if (!EventSystem.current.IsPointerOverGameObject())
+            if (buildTowerUI != null && areaBehaviour.state == AreaBehaviour.State.building)
+                buildTowerUI.setCaller(gameObject).OpenUpgradeDialog();
     }
 
     public void Upgrade()
@@ -73,7 +77,7 @@ public class TowerUpgrade : MonoBehaviour
         if (towerStats.level < 3)
         {
             towerStats.level++;
-			displayStars();
+            displayStars();
         }
     }
 

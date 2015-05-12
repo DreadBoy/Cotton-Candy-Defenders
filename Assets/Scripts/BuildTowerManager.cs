@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class BuildTowerManager : MonoBehaviour
 {
 
-    static Dictionary<TowerType, GameObject> towerPrefabs = new Dictionary<TowerType, GameObject>();
+    private Dictionary<TowerType, GameObject> towerPrefabs = new Dictionary<TowerType, GameObject>();
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class BuildTowerManager : MonoBehaviour
         
     }
 
-    public static GameObject buildTower(TowerType type, Vector3 position)
+    public GameObject buildTower(TowerType type, Vector3 position)
     {
         if (!towerPrefabs.ContainsKey(type))
             return null;

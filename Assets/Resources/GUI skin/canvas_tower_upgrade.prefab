@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -78,7 +78,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126126}
-  m_LocalRotation: {x: -.224143863, y: .482962966, z: -.129409537, w: -.836516261}
+  m_LocalRotation: {x: .433012754, y: .433012754, z: -.25000006, w: .75}
   m_LocalPosition: {x: 0, y: 0, z: -59.6987381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -100,4 +100,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 126126}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

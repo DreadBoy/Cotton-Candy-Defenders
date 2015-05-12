@@ -12,7 +12,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
     GameObject goldEarned = null;
 
-	LevelBehaviour levelBehaviour = null;
+	AreaBehaviour areaBehaviour = null;
 	// Use this for initialization
 	void Start () {
 
@@ -22,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
         goldEarned = Resources.Load<GameObject>("Prefabs/GoldEarn");
 
-		levelBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<LevelBehaviour>();
+        areaBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<AreaBehaviour>();
 	}
 	
 	// Update is called once per frame
@@ -51,6 +51,6 @@ public class EnemyBehaviour : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         GameObject.Destroy(gameObject);
-		levelBehaviour.monsterKilled();
+		areaBehaviour.monsterKilled();
     }
 }

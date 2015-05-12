@@ -3,31 +3,49 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class BuildTowerUI : MonoBehaviour {
-    	private GameObject buildTowerLabel;
+public class BuildTowerUI : MonoBehaviour
+{
 
-	private GameObject caller;
-	
-	void Start () {
+    private GameObject buildTowerLabel;
+    private GameObject upgradeTowerLabel;
+    public GameObject caller;
+
+    void Start()
+    {
 
         buildTowerLabel = GameObject.Find("BuildTowerLabel");
-        buildTowerLabel.GetComponent<BuildTowerLabelBehaviour>().Close();
+        buildTowerLabel.GetComponent<UIDialog>().Close();
+        upgradeTowerLabel = GameObject.Find("UpgradeTowerLabel");
+        upgradeTowerLabel.GetComponent<UIDialog>().Close();
 
-	}
-	
-	public BuildTowerUI setCaller(GameObject call)
-	{
-		caller = call;
-		return this;
-	}
-	
-	public void OpenBuildDialog()
-	{
-        buildTowerLabel.GetComponent<BuildTowerLabelBehaviour>().Open(Input.mousePosition);
-	}
+
+    }
+
+    public BuildTowerUI setCaller(GameObject call)
+    {
+        caller = call;
+        return this;
+    }
+
+    public void OpenBuildDialog()
+    {
+        buildTowerLabel.GetComponent<BuildTowerLabelBehaviour>().resize();
+        buildTowerLabel.GetComponent<UIDialog>().Open(Input.mousePosition);
+    }
 
     public void CloseBuildDialog()
     {
-        buildTowerLabel.GetComponent<BuildTowerLabelBehaviour>().Close();
-	}
+        buildTowerLabel.GetComponent<UIDialog>().Close();
+    }
+
+    public void OpenUpgradeDialog()
+    {
+        upgradeTowerLabel.GetComponent<UpgradeTowerLabelBehaviour>().setCaller(caller);
+        upgradeTowerLabel.GetComponent<UIDialog>().Open(Input.mousePosition);
+    }
+
+    public void CloseUpgradeDialog()
+    {
+        upgradeTowerLabel.GetComponent<UIDialog>().Close();
+    }
 }

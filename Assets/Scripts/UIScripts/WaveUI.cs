@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
-[RequireComponent(typeof(WaveManager))]
 public class WaveUI : MonoBehaviour
 {
 	GameObject waveLabel;
@@ -10,16 +10,25 @@ public class WaveUI : MonoBehaviour
 	GameObject endWavePanel;
 	GameObject endLevelPanel;
 
-    WaveManager waveManager = null;
-
     void Start()
     {
 		waveLabel = GameObject.Find("NewWaveLabel");
 		readyButton = GameObject.Find("ReadyWaveButton");
 		endWavePanel = GameObject.Find("EndWavePanel");
 		endLevelPanel = GameObject.Find("EndLevelPanel");
+    }
 
-        waveManager = GetComponent<WaveManager>();
+    public void newWave(Int32 wave)
+    {
+        waveLabel.GetComponent<NewWaveLabelBehaviour>().Begin(wave);
+        StartCoroutine(newWaveHideCoroutine());
+        endWavePanel.SetActive(false);
+        endLevelPanel.SetActive(false);
+    }
+
+    public void startWave()
+    {
+        readyButton.SetActive(false);
     }
 
 	public void endWave(){
@@ -36,7 +45,4 @@ public class WaveUI : MonoBehaviour
 		readyButton.SetActive(true);
 	}
 
-	public void newWaveHide(){
-		StartCoroutine("newWaveHideCoroutine");
-	}
 }

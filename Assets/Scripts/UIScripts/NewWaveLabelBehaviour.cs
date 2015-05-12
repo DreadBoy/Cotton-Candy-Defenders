@@ -1,28 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class NewWaveLabelBehaviour : MonoBehaviour
 {
     Text label;
     RectTransform rectTransform;
-	WaveManager waveManager = null;
     void Awake()
     {
         label = GetComponent<Text>();
         rectTransform = GetComponent<RectTransform>();
-		waveManager = GameObject.FindGameObjectWithTag("Level").GetComponent<WaveManager>();
     }
 
 	/// <summary>
 	/// Start animating the label
 	/// </summary>
-	public void Begin(){
+	public void Begin(Int32 wave){
 		gameObject.SetActive(true);
 		rectTransform.localPosition = Vector3.zero;
 		rectTransform.localScale = Vector3.zero;
 
-		label.text = "Wave " + waveManager.waveNum;
+        label.text = "Wave " + wave;
 
 		StartCoroutine("ScaleIn");
 	}
