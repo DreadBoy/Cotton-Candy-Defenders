@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Animation))]
 [RequireComponent(typeof(PathFinding))]
 [RequireComponent(typeof(EnemyStats))]
 public class EnemyBehaviour : MonoBehaviour {
