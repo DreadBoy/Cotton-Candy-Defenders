@@ -5,8 +5,11 @@ using System.Collections;
 public class Projectile : MonoBehaviour
 {
 
-    private GameObject goal;
+    private GameObject goal = null;
     private TrailRenderer trail;
+
+    public float speed;
+    public int damage;
 
     // Use this for initialization
     void Start()
@@ -15,37 +18,22 @@ public class Projectile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        if (goal == null)
+            return;
+        float step = speed * Time.deltaTime * 30;
 
+        transform.position = Vector3.MoveTowards(transform.position, goal.transform.position, step);
+
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, goal.transform.position - transform.position, step, 0.0F);
+        transform.rotation = Quaternion.LookRotation(newDir);
     }
 
     public void setGoal(GameObject _goal)
     {
         goal = _goal;
-        StartCoroutine("Move");
-    }
-
-    private IEnumerator Move()
-    {
-        float timeSinceStarted = 0f;
-        while (true && goal != null)
-        {
-            timeSinceStarted += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, goal.transform.position, timeSinceStarted / 2);
-
-            // If the object has arrived, stop the coroutine
-            if (transform.position == goal.transform.position)
-            {
-                GameObject.Destroy(gameObject);
-                yield break;
-            }
-
-            // Otherwise, continue next frame
-            yield return null;
-        }
-        if (goal == null)
-            Destroy(gameObject);
+        //StartCoroutine("Move");
     }
 
     void OnTriggerEnter(Collider other)
@@ -54,7 +42,7 @@ public class Projectile : MonoBehaviour
         {
             EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
              
-            enemyBehaviour.takeDamage(1);
+            enemyBehaviour.takeDamage(damage);
             GameObject.Destroy(gameObject);
 
         }
