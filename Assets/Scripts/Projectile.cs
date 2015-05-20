@@ -21,7 +21,10 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         if (goal == null)
+        {
+            GameObject.Destroy(gameObject);
             return;
+        }
         float step = speed * Time.deltaTime * 30;
 
         transform.position = Vector3.MoveTowards(transform.position, goal.transform.position, step);

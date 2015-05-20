@@ -20,6 +20,7 @@ public class SpawnBehaviour : MonoBehaviour
 
     AreaBehaviour areaBehaviour = null;
     public List<LevelWraper> levels = new List<LevelWraper>();
+    public Single waitTime = 2.5f;
     Dictionary<Monster.Type, GameObject> prefabs = new Dictionary<Monster.Type, GameObject>();
 
     void Start()
@@ -68,7 +69,7 @@ public class SpawnBehaviour : MonoBehaviour
             if (finished)
                 yield break;
 
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(waitTime);
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(EnemyStats))]
 public class EnemyBehaviour : MonoBehaviour {
 
-    Animation animationController = null;
+    Animator animator = null;
     PathFinding pathFinding = null;
     EnemyStats enemyStats = null;
 
@@ -15,7 +15,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        animationController = GetComponent<Animation>();
+        animator = GetComponent<Animator>();
         pathFinding = GetComponent<PathFinding>();
         enemyStats = GetComponent<EnemyStats>();
 
@@ -34,14 +34,13 @@ public class EnemyBehaviour : MonoBehaviour {
         if (enemyStats.health <= 0)
         {
             pathFinding.Stop();
-            animationController.CrossFade("death1");
+            animator.SetTrigger("Death");
             StartCoroutine("DelayDestroy");
             ((GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity)).GetComponent<GoldEarn>().Start(transform.position);
         }
         else
         {
-            animationController.CrossFade("hit1");
-            animationController.CrossFadeQueued("walk");
+            animator.SetTrigger("Hit");
         }
     }
 
