@@ -62,7 +62,8 @@ public class SpawnBehaviour : MonoBehaviour
                 continue;
             if (!prefabs.ContainsKey(levels[level].waves[wave].monsters[0]))
                 continue;
-			Instantiate(prefabs[levels[level].waves[wave].monsters[0]], transform.position, prefabs[levels[level].waves[wave].monsters[0]].transform.rotation);
+            
+            Instantiate(prefabs[levels[level].waves[wave].monsters[0]], transform.position, transform.rotation);
             levels[level].waves[wave].monsters.RemoveAt(0);
             if (levels[level].waves[wave].monsters.Count > 0)
                 finished = false;

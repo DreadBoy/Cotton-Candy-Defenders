@@ -47,7 +47,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
     IEnumerator DelayDestroy()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         GameObject.Destroy(gameObject);
 		areaBehaviour.monsterKilled();
     }
