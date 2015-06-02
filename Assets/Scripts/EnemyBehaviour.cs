@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 [RequireComponent(typeof(PathFinding))]
 [RequireComponent(typeof(EnemyStats))]
-public class EnemyBehaviour : MonoBehaviour {
+public class EnemyBehaviour : MonoBehaviour
+{
 
     Animator animator = null;
     PathFinding pathFinding = null;
@@ -11,9 +13,12 @@ public class EnemyBehaviour : MonoBehaviour {
 
     GameObject goldEarned = null;
 
-	AreaBehaviour areaBehaviour = null;
-	// Use this for initialization
-	void Start () {
+    AreaBehaviour areaBehaviour = null;
+
+    private Boolean dying = false;
+    // Use this for initialization
+    void Start()
+    {
 
         animator = GetComponent<Animator>();
         pathFinding = GetComponent<PathFinding>();
@@ -22,21 +27,19 @@ public class EnemyBehaviour : MonoBehaviour {
         goldEarned = Resources.Load<GameObject>("Prefabs/GoldEarn");
 
         areaBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<AreaBehaviour>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     public void takeDamage(int damage)
     {
         enemyStats.health -= damage;
         if (enemyStats.health <= 0)
         {
-            pathFinding.Stop();
-            animator.SetTrigger("Death");
-            StartCoroutine("DelayDestroy");
-            ((GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity)).GetComponent<GoldEarn>().Start(transform.position);
+            Death();
         }
         else
         {
@@ -44,11 +47,28 @@ public class EnemyBehaviour : MonoBehaviour {
         }
     }
 
+    public void Die()
+    {
+        Death();
+    }
+
+    private void Death()
+    {
+        pathFinding.Stop();
+        animator.SetTrigger("Death");
+        StartCoroutine("DelayDestroy");
+        if (!dying)
+        {
+            ((GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity)).GetComponent<GoldEarn>().Start(transform.position, enemyStats.worth);
+            PlayerProgress.Gold += enemyStats.worth;
+        }
+        dying = true;
+    }
 
     IEnumerator DelayDestroy()
     {
         yield return new WaitForSeconds(1f);
         GameObject.Destroy(gameObject);
-		areaBehaviour.monsterKilled();
+        areaBehaviour.monsterKilled();
     }
 }
