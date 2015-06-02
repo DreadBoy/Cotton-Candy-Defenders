@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class GoldEarn : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class GoldEarn : MonoBehaviour
 
     private Texture2D goldTexture = null;
 
+    String text = "+150";
+
     // Use this for initialization
     void Start()
     {
@@ -25,7 +28,7 @@ public class GoldEarn : MonoBehaviour
         skin = Resources.Load<GUISkin>("GUI skin/CCD");
     }
 
-    public void Start(Vector3 pos)
+    public void Start(Vector3 pos, Int32 text)
     {
         position = Camera.main.WorldToScreenPoint(pos);
         position.y = Screen.height - position.y;
@@ -37,6 +40,8 @@ public class GoldEarn : MonoBehaviour
         area.y = position.y;
         StartCoroutine("Move");
         instantiated = true;
+
+        this.text = "+" + text.ToString();
 
     }
 
@@ -60,7 +65,7 @@ public class GoldEarn : MonoBehaviour
         guiColor.a = opacity;
         GUI.color = guiColor;
 
-        GUILayout.Label("+150", new GUIStyle(skin.label) { fixedHeight = 30, fontSize = 16 });
+        GUILayout.Label(text, new GUIStyle(skin.label) { fixedHeight = 30, fontSize = 16 });
         GUILayout.Label(goldTexture, GUILayout.Height(30));
 
         GUILayout.EndHorizontal();
