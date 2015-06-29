@@ -6,7 +6,6 @@ public class Projectile : MonoBehaviour
 {
 
     private GameObject goal = null;
-    private TrailRenderer trail;
 
     public float speed;
     public int damage;
@@ -14,7 +13,6 @@ public class Projectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        trail = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
