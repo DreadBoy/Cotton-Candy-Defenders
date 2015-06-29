@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 141a04e17bb112640b04b397d82064eb
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: Group103
     100002: Group18
@@ -37,6 +37,16 @@ ModelImporter:
     100062: ID56
     100064: ID72
     100066: PoisonedTower
+    100068: ID126
+    100070: ID132
+    100072: ID138
+    100074: ID144
+    100076: ID150
+    100078: ID156
+    100080: ID64
+    100082: ID70
+    100084: ID78
+    100086: ID84
     400000: Group103
     400002: Group18
     400004: Group80
@@ -71,6 +81,16 @@ ModelImporter:
     400062: ID56
     400064: ID72
     400066: PoisonedTower
+    400068: ID126
+    400070: ID132
+    400072: ID138
+    400074: ID144
+    400076: ID150
+    400078: ID156
+    400080: ID64
+    400082: ID70
+    400084: ID78
+    400086: ID84
     2300000: Group103
     2300002: Group18
     2300004: Group80
@@ -98,6 +118,16 @@ ModelImporter:
     2300048: ID50
     2300050: ID56
     2300052: ID72
+    2300054: ID126
+    2300056: ID132
+    2300058: ID138
+    2300060: ID144
+    2300062: ID150
+    2300064: ID156
+    2300066: ID64
+    2300068: ID70
+    2300070: ID78
+    2300072: ID84
     3300000: Group103
     3300002: Group18
     3300004: Group80
@@ -125,6 +155,16 @@ ModelImporter:
     3300048: ID50
     3300050: ID56
     3300052: ID72
+    3300054: ID126
+    3300056: ID132
+    3300058: ID138
+    3300060: ID144
+    3300062: ID150
+    3300064: ID156
+    3300066: ID64
+    3300068: ID70
+    3300070: ID78
+    3300072: ID84
     4300000: Group103
     4300002: ID14
     4300004: ID22
@@ -152,6 +192,16 @@ ModelImporter:
     4300048: ID118
     4300050: ID124
     4300052: ID130
+    4300054: ID64
+    4300056: ID70
+    4300058: ID78
+    4300060: ID84
+    4300062: ID126
+    4300064: ID132
+    4300066: ID138
+    4300068: ID144
+    4300070: ID150
+    4300072: ID156
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -180,11 +230,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -207,3 +259,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

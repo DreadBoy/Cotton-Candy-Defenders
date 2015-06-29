@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 16b73623b07e0554d84e89f64eea3871
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
     100002: Component_4
@@ -30,6 +30,7 @@ ModelImporter:
     100048: ID62
     100050: ID68
     100052: SlowingTower
+    100054: BasicTower
     400000: //RootNode
     400002: Component_4
     400004: Group16
@@ -57,6 +58,7 @@ ModelImporter:
     400048: ID62
     400050: ID68
     400052: SlowingTower
+    400054: BasicTower
     2300000: Group16
     2300002: Group54
     2300004: Group82
@@ -145,11 +147,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -172,3 +176,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

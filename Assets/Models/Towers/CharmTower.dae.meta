@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 2f85c388f49ba874e91b548c0239779e
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: CharmTower
     100002: //RootNode
@@ -26,6 +26,8 @@ ModelImporter:
     100040: instance_1
     100042: instance_2
     100044: instance_3
+    100046: ID122
+    100048: ID128
     400000: //RootNode
     400002: CharmTower
     400004: Group18
@@ -49,6 +51,8 @@ ModelImporter:
     400040: instance_1
     400042: instance_2
     400044: instance_3
+    400046: ID122
+    400048: ID128
     2300000: Group18
     2300002: Group80
     2300004: Group97
@@ -66,6 +70,8 @@ ModelImporter:
     2300028: ID74
     2300030: ID90
     2300032: ID96
+    2300034: ID122
+    2300036: ID128
     3300000: Group18
     3300002: Group80
     3300004: Group97
@@ -83,6 +89,8 @@ ModelImporter:
     3300028: ID74
     3300030: ID90
     3300032: ID96
+    3300034: ID122
+    3300036: ID128
     4300000: Group80
     4300002: ID14
     4300004: ID22
@@ -100,6 +108,8 @@ ModelImporter:
     4300028: ID102
     4300030: ID108
     4300032: ID114
+    4300034: ID122
+    4300036: ID128
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -128,11 +138,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -155,3 +167,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
