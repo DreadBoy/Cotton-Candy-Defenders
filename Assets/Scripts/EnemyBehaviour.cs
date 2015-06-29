@@ -4,6 +4,7 @@ using System;
 
 [RequireComponent(typeof(PathFinding))]
 [RequireComponent(typeof(EnemyStats))]
+[RequireComponent(typeof(PlayerGold))]
 public class EnemyBehaviour : MonoBehaviour
 {
 
@@ -12,6 +13,7 @@ public class EnemyBehaviour : MonoBehaviour
     EnemyStats enemyStats = null;
 
     GameObject goldEarned = null;
+    PlayerGold playerGold = null;
 
     AreaBehaviour areaBehaviour = null;
 
@@ -23,16 +25,11 @@ public class EnemyBehaviour : MonoBehaviour
         animator = GetComponent<Animator>();
         pathFinding = GetComponent<PathFinding>();
         enemyStats = GetComponent<EnemyStats>();
+        playerGold = GetComponent<PlayerGold>();
 
         goldEarned = Resources.Load<GameObject>("Prefabs/GoldEarn");
 
         areaBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<AreaBehaviour>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
     public void takeDamage(int damage)
     {
@@ -59,8 +56,8 @@ public class EnemyBehaviour : MonoBehaviour
         StartCoroutine("DelayDestroy");
         if (!dying)
         {
-            ((GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity)).GetComponent<GoldEarn>().Start(transform.position, enemyStats.worth);
-            PlayerProgress.Gold += enemyStats.worth;
+            if (playerGold.Earn(enemyStats.worth))
+                ((GameObject)Instantiate(goldEarned, Vector3.zero, Quaternion.identity)).GetComponent<GoldEarn>().Start(transform.position, enemyStats.worth);
         }
         dying = true;
     }

@@ -18,6 +18,11 @@ public class TowerUpgrade : MonoBehaviour
 
     List<GameObject> stars = new List<GameObject>();
 
+    PlayerGold playerGold = null;
+    void Awake()
+    {
+        playerGold = GetComponent<PlayerGold>();
+    }
     void Start()
     {
         towerStats = GetComponent<TowerStats>();
@@ -40,6 +45,7 @@ public class TowerUpgrade : MonoBehaviour
         stars.Clear();
 
         canvas.transform.SetParent(gameObject.transform);
+        canvas.transform.localEulerAngles = new Vector3(315, 35, 125);
 
         Vector3 position = Vector3.zero;
 
@@ -77,6 +83,8 @@ public class TowerUpgrade : MonoBehaviour
         if (towerStats.level < 3)
         {
             towerStats.level++;
+            if (playerGold != null)
+                playerGold.Spend(100);
             displayStars();
         }
     }

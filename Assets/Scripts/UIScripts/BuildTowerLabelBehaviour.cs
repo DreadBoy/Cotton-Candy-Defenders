@@ -21,9 +21,8 @@ public class BuildTowerLabelBehaviour : MonoBehaviour
         GameObject level = GameObject.FindGameObjectWithTag("Level");
         if (level == null)
             return;
-        int levelNum = level.GetComponent<AreaBehaviour>().level;
 
-        types = allTypes.Take(levelNum).ToArray<TowerType>();
+        types = allTypes.Take(PlayerProgress.level).ToArray<TowerType>();
 
         foreach (var type in allTypes)
         {

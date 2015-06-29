@@ -7,7 +7,6 @@ public class TowerShot : MonoBehaviour
 
     float shotCooldown = 0;
     public GameObject projectile;
-    private Vector3 shotPosition;
 	TowerStats towerStats = null;
 
     void Start()

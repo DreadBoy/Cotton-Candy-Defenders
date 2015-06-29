@@ -15,10 +15,6 @@ public class AreaBehaviour : MonoBehaviour
     public State state = State.building;
     //TODO display enemy portraits on doors
 
-
-    public Int32 level = 1;
-    public Int32 level_max = 4;
-
     public Int32 wave = 1;
     public Int32 wave_max = 5;
     
@@ -42,9 +38,10 @@ public class AreaBehaviour : MonoBehaviour
     /// </summary>
     public void startLevel()
     {
+        wave = 1;
         enableSpots();
         state = State.building;
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovement>().gotoLevel(level);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovement>().gotoLevel(PlayerProgress.level);
         waveUI.newWave(wave);
     }
 
@@ -67,7 +64,7 @@ public class AreaBehaviour : MonoBehaviour
         wave++;
         if (wave > wave_max)
         {
-            level++;
+            PlayerProgress.level++;
             waveUI.endLevel();
         }
         else
@@ -92,7 +89,7 @@ public class AreaBehaviour : MonoBehaviour
     {
         foreach (var spawn in spawns)
         {
-            spawn.GetComponent<SpawnBehaviour>().SpawnMonsters(level, wave);
+            spawn.GetComponent<SpawnBehaviour>().SpawnMonsters(PlayerProgress.level, wave);
         }
     }
 

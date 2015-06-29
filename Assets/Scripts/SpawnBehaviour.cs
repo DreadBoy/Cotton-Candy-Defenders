@@ -30,9 +30,9 @@ public class SpawnBehaviour : MonoBehaviour
 
         areaBehaviour = GameObject.FindGameObjectWithTag("Level").GetComponent<AreaBehaviour>();
 
-        for (int l = 0; l < areaBehaviour.level_max; l++)
+        for (int l = 0; l < PlayerProgress.levelMax; l++)
         {
-            while(levels.Count < areaBehaviour.level_max) //only if not set up in Editor
+            while (levels.Count < PlayerProgress.levelMax) //only if not set up in Editor
                 levels.Add(new LevelWraper());
 
             for (int w = 0; w < areaBehaviour.wave_max; w++)

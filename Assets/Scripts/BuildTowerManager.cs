@@ -6,7 +6,12 @@ public class BuildTowerManager : MonoBehaviour
 {
 
     private Dictionary<TowerType, GameObject> towerPrefabs = new Dictionary<TowerType, GameObject>();
+    PlayerGold playerGold = null;
 
+    void Awake()
+    {
+        playerGold = GetComponent<PlayerGold>();
+    }
     void Start()
     {
         towerPrefabs.Add(TowerType.basic, Resources.Load<GameObject>("Prefabs/Towers/BasicTower"));
@@ -16,7 +21,7 @@ public class BuildTowerManager : MonoBehaviour
         towerPrefabs.Add(TowerType.poison, Resources.Load<GameObject>("Prefabs/Towers/PoisonedTower"));
         towerPrefabs.Add(TowerType.fear, Resources.Load<GameObject>("Prefabs/Towers/FearTower"));
         towerPrefabs.Add(TowerType.charm, Resources.Load<GameObject>("Prefabs/Towers/CharmTower"));
-        
+
     }
 
     public GameObject buildTower(TowerType type, Vector3 position)
@@ -25,19 +30,27 @@ public class BuildTowerManager : MonoBehaviour
             return null;
         TowerStats towerStats = towerPrefabs[type].GetComponent<TowerStats>();
         if (towerStats != null)
-            return (GameObject)Instantiate(towerPrefabs[type], position, towerPrefabs[type].transform.rotation);
-        else
+        {
+            if (towerStats.Cost <= PlayerProgress.gold.gold)
+            {
+                GameObject tower = (GameObject)Instantiate(towerPrefabs[type], position, towerPrefabs[type].transform.rotation);
+                if (playerGold != null)
+                    playerGold.Spend(towerStats.Cost);
+                return tower;
+            }
             return null;
+        }
+        return null;
     }
 }
 
 public enum TowerType
 {
     basic,
-	slow,
-	stun,
-	pierce,
-	poison,
-	fear,
-	charm
+    slow,
+    stun,
+    pierce,
+    poison,
+    fear,
+    charm
 }
